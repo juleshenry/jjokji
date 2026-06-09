@@ -1,0 +1,214 @@
+#!/usr/bin/env python3
+import csv
+import os
+import shutil
+import subprocess
+import sys
+import uuid
+
+
+REPOS = {
+    "french_notes": "https://github.com/juleshenry/french_notes.git",
+    "korean_notes": "https://github.com/juleshenry/korean_notes.git",
+    "portuguese_notes": "https://github.com/juleshenry/portuguese_notes.git",
+    "castellano_notes": "https://github.com/juleshenry/castellano_notes.git",
+    "all_lang_notes": "https://github.com/juleshenry/all_lang_notes.git",
+}
+
+LANG_MAP = {
+    "pt": ("Portuguese", "portuguese_notes"),
+    "fr": ("French", "french_notes"),
+    "kr": ("Korean", "korean_notes"),
+    "es": ("Castellano", "castellano_notes"),
+}
+
+
+def script_dir() -> str:
+    return os.path.abspath(os.path.dirname(__file__))
+
+
+def workspace_root() -> str:
+    return os.path.abspath(os.path.join(script_dir(), ".."))
+
+
+def repo_path(name: str, root: str | None = None) -> str:
+    base = root or workspace_root()
+    return os.path.join(base, name)
+
+
+def missing_repos(root: str | None = None) -> list[str]:
+    base = root or workspace_root()
+    return [name for name in REPOS if not os.path.isdir(repo_path(name, base))]
+
+
+def brainbrew_ok() -> bool:
+    if shutil.which("brainbrew"):
+        return True
+    local_bin = os.path.expanduser("~/.local/bin/brainbrew")
+    return os.path.isfile(local_bin)
+
+
+def brainbrew_command() -> str:
+    found = shutil.which("brainbrew")
+    if found:
+        return found
+    return os.path.expanduser("~/.local/bin/brainbrew")
+
+
+def print_usage() -> None:
+    print("Usage:")
+    print("  jj doctor")
+    print("  jj bootstrap")
+    print("  jj add <lang> <translation_lang> <front> <back>")
+    print("  jj <lang> <translation_lang> <front> <back>")
+    print('Example: jj pt en "convite" "invitation"')
+
+
+def doctor(root: str | None = None) -> int:
+    base = root or workspace_root()
+    print(f"workspace: {base}")
+    missing = missing_repos(base)
+    for name in REPOS:
+        status = "ok" if name not in missing else "missing"
+        print(f"{status:7} {repo_path(name, base)}")
+
+    brew_status = "ok" if brainbrew_ok() else "missing"
+    print(f"{brew_status:7} brainbrew")
+
+    return 0 if not missing and brainbrew_ok() else 1
+
+
+def prompt_yes_no(prompt: str) -> bool:
+    answer = input(prompt).strip().lower()
+    return answer in ("", "y", "yes")
+
+
+def bootstrap() -> int:
+    base = workspace_root()
+    print(f"workspace: {base}")
+    missing = missing_repos(base)
+    if not missing:
+        print("all sibling repos are present")
+        return doctor(base)
+
+    print("missing repos:")
+    for name in missing:
+        print(f"- {name}")
+
+    if not prompt_yes_no(f"Clone missing repos into {base}? [Y/n] "):
+        print("cancelled")
+        return 1
+
+    for name in missing:
+        url = REPOS[name]
+        target = repo_path(name, base)
+        result = subprocess.run(["gh", "repo", "clone", url.removesuffix(".git"), target], text=True)
+        if result.returncode != 0:
+            print(f"failed to clone {name}")
+            return result.returncode
+
+    return doctor(base)
+
+
+def ensure_ready() -> tuple[str, str, str]:
+    base = workspace_root()
+    missing = missing_repos(base)
+    if missing:
+        print("missing sibling repos:")
+        for name in missing:
+            print(f"- {name}")
+        print("run `jj bootstrap` first")
+        raise SystemExit(1)
+
+    if not brainbrew_ok():
+        print("brainbrew is missing")
+        raise SystemExit(1)
+
+    return (
+        base,
+        repo_path("all_lang_notes", base),
+        brainbrew_command(),
+    )
+
+
+def append_markdown(md_file: str, translation_lang: str, front: str, back: str) -> None:
+    with open(md_file, "a", encoding="utf-8") as handle:
+        handle.write(f"\n## {front}\n**{translation_lang}**: {back}\n")
+
+
+def append_csv(csv_file: str, language: str, translation_lang: str, front: str, back: str) -> None:
+    with open(csv_file, "a", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow([str(uuid.uuid4()), language, translation_lang, front, back, language.lower()])
+
+
+def rebuild(all_lang_root: str, brainbrew: str) -> int:
+    env = os.environ.copy()
+    local_bin_dir = os.path.expanduser("~/.local/bin")
+    env["PATH"] = env.get("PATH", "") + os.pathsep + local_bin_dir
+    result = subprocess.run(
+        [brainbrew, "run", "recipes/source_to_anki.yaml"],
+        cwd=all_lang_root,
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode == 0:
+        print("updated anki build")
+        return 0
+
+    print("brainbrew failed")
+    if result.stderr:
+        print(result.stderr.strip())
+    return result.returncode
+
+
+def add_note(lang: str, translation_lang: str, front: str, back: str) -> int:
+    if lang not in LANG_MAP:
+        print(f"unknown lang: {lang}")
+        print(f"choose from: {', '.join(LANG_MAP)}")
+        return 1
+
+    base, all_lang_root, brainbrew = ensure_ready()
+    language_name, repo_name = LANG_MAP[lang]
+    md_file = os.path.join(repo_path(repo_name, base), "jjokji_notes.md")
+    csv_file = os.path.join(all_lang_root, "src", "data", "LanguageNotes.csv")
+
+    append_markdown(md_file, translation_lang, front, back)
+    print(f"updated {md_file}")
+
+    append_csv(csv_file, language_name, translation_lang, front, back)
+    print(f"updated {csv_file}")
+
+    return rebuild(all_lang_root, brainbrew)
+
+
+def main() -> int:
+    args = sys.argv[1:]
+    if not args:
+        print_usage()
+        return 1
+
+    command = args[0]
+
+    if command == "doctor":
+        return doctor()
+
+    if command == "bootstrap":
+        return bootstrap()
+
+    if command == "add":
+        if len(args) != 5:
+            print_usage()
+            return 1
+        return add_note(args[1], args[2], args[3], args[4])
+
+    if len(args) == 4:
+        return add_note(args[0], args[1], args[2], args[3])
+
+    print_usage()
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,8 @@
+- generate_crowd_anki:
+    folder: build/all_lang_notes
+    notes:
+      part_id: notes
+    note_models:
+      part_id: note_models
+    media:
+      part_id: media

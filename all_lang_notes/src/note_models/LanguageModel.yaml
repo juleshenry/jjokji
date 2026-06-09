@@ -1,0 +1,11 @@
+name: LanguageModel
+id: language_model_uuid_1234
+css_file: src/note_models/LanguageModel.css
+fields:
+  - name: Language
+  - name: Topic
+  - name: Front
+  - name: Back
+templates:
+  - name: Card 1
+    html_file: src/note_models/LanguageModel.html
