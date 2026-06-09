@@ -7,11 +7,11 @@ Expected layout:
 ```text
 minhasnotas/
   jjokji/
+    all_lang_notes/
   french_notes/
   portuguese_notes/
   korean_notes/
   castellano_notes/
-  all_lang_notes/
 ```
 
 Commands:
@@ -23,4 +23,4 @@ Commands:
 ./jj pt en "convite" "invitation"
 ```
 
-`jj` writes to the target language repo and to `all_lang_notes`, then runs `brainbrew`.
+`jj` writes to the target language repo and to `jjokji/all_lang_notes`, then runs `brainbrew`.

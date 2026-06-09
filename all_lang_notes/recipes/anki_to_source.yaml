@@ -20,8 +20,8 @@
 - generate_csvs:
     notes: deck_notes
     file_mappings:
-    - file: src/data/Basic.csv
-      note_model: Basic
+    - file: src/data/LanguageNotes.csv
+      note_model: LanguageModel
     note_model_mappings:
     - note_models:
-      - Basic
+      - LanguageModel

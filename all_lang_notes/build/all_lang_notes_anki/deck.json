@@ -681,6 +681,838 @@
             "tags": [
                 "portuguese"
             ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Louças, copos ou dentes: Chipped (Ex: A chipped plate / Um prato lascado).Madeira, pedra ou vidro (com pontas afiadas/estilhaços): Splintery ou Splintered.Pequenos amassados ou riscos: Nicked."
+            ],
+            "flags": 0,
+            "guid": "6743b15b-c2f4-4898-a6fd-c5346932e954",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Louças, copos ou dentes: Chipped"
+            ],
+            "flags": 0,
+            "guid": "7fd17514-5831-4a17-827f-092c776d767e",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Madeira, pedra ou vidro (com pontas afiadas/estilhaços): Splintery ou Splintered"
+            ],
+            "flags": 0,
+            "guid": "5cb6efc0-5eff-4a94-b112-d27dc61b38c4",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Pequenos amassados ou riscos: Nicked."
+            ],
+            "flags": 0,
+            "guid": "3dbf26bd-19ad-43e3-9abe-8e39dadd875b",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Louças: Chipped"
+            ],
+            "flags": 0,
+            "guid": "82f71880-de36-4cbc-9748-9a41e1130164",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Madeira: Splintered"
+            ],
+            "flags": 0,
+            "guid": "4e7e8594-fef1-4982-ae8b-58ec04fb1284",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "lascado",
+                "Riscos: Nicked"
+            ],
+            "flags": 0,
+            "guid": "84fc94a4-793f-44d3-bc19-be5a68f21dc0",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "sondagem",
+                "Pesquisa de Opinião: Utilizada para captar intenções de voto ou medir a percepção pública sobre temas sociais e políticos.Construção e Geotecnia: Uma técnica de engenharia (como a sondagem a trado ou SPT) usada para analisar a resistência e a composição do solo antes de iniciar uma obra.Economia e Indústria: Levantamentos regulares que ajudam a antecipar tendências econômicas, como a Sondagem Industrial promovida pela CNI ou a Sondagem da Indústria da FGV IBRE."
+            ],
+            "flags": 0,
+            "guid": "25d9d03a-ad11-46b6-8f2c-3b3a562ed1f4",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "emprestado",
+                "prestado"
+            ],
+            "flags": 0,
+            "guid": "618750b1-fadd-4bad-9c20-d084c91a081f",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "convitezinho",
+                "tiny invitation"
+            ],
+            "flags": 0,
+            "guid": "a754d7e7-7bf8-47aa-a08c-4befd492007f",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "afago",
+                "Everyday Language: As a noun, you might hear it used to describe a loving pat or a stroke (e.g., Fez um afago no menino, meaning \"He/She caressed the boy\")."
+            ],
+            "flags": 0,
+            "guid": "8d27d352-234a-453a-913f-1bebdfe3f0eb",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "desvencilhar",
+                "significa soltar, libertar ou desembaraçar-se de algo ou alguém incômodo. O termo é frequentemente usado como sinônimo de escapar, afastar-se ou descartar algo.📘 Definição e SinônimosO verbo transitivo e pronominal descreve a ação de se desatar de amarras físicas ou de situações difíceis.Principais sinônimos: livrar, libertar, desembaraçar, escapar, esquivar e desatar.Opostos: prender, amarrar e segurar.💬 Exemplos de Uso\"Ele tentou se desvencilhar das garras do criminoso.\"\"A empresa busca se desvencilhar de contratos abusivos.\"\"Consegui me desvencilhar daquela situação chata."
+            ],
+            "flags": 0,
+            "guid": "d8270522-b384-4a3a-bc85-18b26cbff96e",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "es",
+                "fogueira",
+                "Hoguera o fogata: Fuego controlado que se utiliza para calentarse, cocinar, iluminar o como punto de reunión social.Pira: En contextos históricos o festivos, hace referencia a una gran pila de materiales combustibles.Uso simbólico: Representa la luz, la purificación y la renovación, siendo un elemento central en festividades tradicionales como las fiestas de San Juan (muy populares en Brasil y la Península Ibérica)"
+            ],
+            "flags": 0,
+            "guid": "adfcedcf-bf16-4524-beba-7406e0fa8bb3",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "barbante",
+                "string"
+            ],
+            "flags": 0,
+            "guid": "f43190a2-f702-4cd7-af8a-83dcb46a076c",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "afiado",
+                "Literal (A blade): Means a sharp object, such as a knife (uma faca afiada).Figurative (A person): Means being sharp, alert, or well-prepared for a test or task.Figurative (A tongue): Refers to being quick-witted, sarcastic, or prone to making cutting remarks."
+            ],
+            "flags": 0,
+            "guid": "f0535c2e-b5bc-4849-9de8-07a7df80aeb0",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "desarvorado",
+                "disordered"
+            ],
+            "flags": 0,
+            "guid": "7c089984-cd1c-4d9f-a795-105b0980926a",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "alien"
+            ],
+            "flags": 0,
+            "guid": "39ba1e2b-0ee0-4e0a-a150-3ab07a9a94ef",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "alien"
+            ],
+            "flags": 0,
+            "guid": "b4927c5b-e5b6-4b54-b059-af94e2885a42",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "danado",
+                "Travesso / Levado (crianças ou arteiros): Use Naughty ou Mischievous.Zangado / Furioso: Pode ser traduzido como Angry ou Furious.Inteligente / Esperto: Em algumas regiões, diz-se que uma pessoa é danada para negócios. Use expressões como Clever ou Smart.Intensificador (para dar ênfase): Quando usado informalmente para expressar algo extremo (ex: fome",
+                "danada), traduz-se como damned ou freaking."
+            ],
+            "flags": 0,
+            "guid": "76cc9ccc-d666-4e75-a1cf-2047a9a12602",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "ladeira",
+                "\"slope,\" \"hill,\" or an inclined, steep street"
+            ],
+            "flags": 0,
+            "guid": "9d6e0d9d-8f07-4484-a2de-583768289858",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "heating"
+            ],
+            "flags": 0,
+            "guid": "ca203e0c-f5b8-4be0-a913-a7949d6cd306",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "warming"
+            ],
+            "flags": 0,
+            "guid": "cb5cf5e8-1c8b-4717-93ac-4e24e7fae34c",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "warm"
+            ],
+            "flags": 0,
+            "guid": "c45a841e-99b2-40b4-aa40-183ddd88a521",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "firing"
+            ],
+            "flags": 0,
+            "guid": "65aff30c-684d-4127-af2a-e7dff4932c5c",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "acceleration"
+            ],
+            "flags": 0,
+            "guid": "9ff2aade-d69c-49d3-ae6a-8bb098b5dc38",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "chafe"
+            ],
+            "flags": 0,
+            "guid": "a036dcc3-d966-4c3d-b63e-434f9ae0fca9",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "warming-up"
+            ],
+            "flags": 0,
+            "guid": "6dfa143d-7f43-40cb-9053-efe95fdb5365",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "heating"
+            ],
+            "flags": 0,
+            "guid": "af85a9f7-e9e9-4b38-ac2e-cb9e76e59a9f",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "warming"
+            ],
+            "flags": 0,
+            "guid": "0c22724f-6800-4be1-a702-bb80f599ac66",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "warm"
+            ],
+            "flags": 0,
+            "guid": "73b6e3c8-b777-4354-90e9-814c9ff300e1",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "firing"
+            ],
+            "flags": 0,
+            "guid": "65755011-c5a0-4b82-92fd-7be6ea0af5af",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "acceleration"
+            ],
+            "flags": 0,
+            "guid": "1b3837ea-bdaf-45c3-a2f1-a92310373363",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "chafe"
+            ],
+            "flags": 0,
+            "guid": "dfefb425-aeeb-46d5-9621-b4451f7fdeaf",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "aquecimento",
+                "warming-up"
+            ],
+            "flags": 0,
+            "guid": "dc1af508-80d9-46ea-bac9-22651ae5a25c",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "alien"
+            ],
+            "flags": 0,
+            "guid": "cccb526e-13f1-4634-85ba-40535dc8aed5",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "foreign"
+            ],
+            "flags": 0,
+            "guid": "bd729b23-3c1e-4ec9-919f-db39caa57fad",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "strange"
+            ],
+            "flags": 0,
+            "guid": "2648e1d2-2084-408d-9594-15fbbd3bd759",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "extraneous"
+            ],
+            "flags": 0,
+            "guid": "23997663-2044-4aeb-9709-eb970b92e010",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "of other"
+            ],
+            "flags": 0,
+            "guid": "d704afeb-347e-411b-ab37-79033fe5f423",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "remote"
+            ],
+            "flags": 0,
+            "guid": "9b748af8-fa00-4b35-b95c-dc77e5cf3d0b",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "alheia",
+                "someone else's"
+            ],
+            "flags": 0,
+            "guid": "64e5f5db-38ce-4afb-8f16-17313624803a",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "levar trombado",
+                "No esporte: É muito comum em esportes de contato, como o futebol (onde jogadores se chocam disputando a bola) ou o vôlei.Acidentes: Também se refere a batidas de trânsito ou a esbarrões no dia a dia.Sentido figurado: Pode representar um soco",
+                "moral, uma desilusão ou um problema repentino que alguém enfrenta."
+            ],
+            "flags": 0,
+            "guid": "21f6eb9a-6816-4809-9e36-b02f6aa38483",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "oba oba",
+                "a versatile, joyful Brazilian expression commonly used as an enthusiastic \"wow\" or \"hooray\""
+            ],
+            "flags": 0,
+            "guid": "19289dc0-23f4-4147-9dbc-665afa29d2e2",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar_cli_test",
+                "Literal: to break or burst"
+            ],
+            "flags": 0,
+            "guid": "8e441efd-c9fa-4ed6-9457-4d1d44d918d8",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar_cli_test",
+                "Slang: to kill it"
+            ],
+            "flags": 0,
+            "guid": "9082472c-d4f6-48ca-b508-112856bcee31",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar",
+                "pbpaste | jj pt arrebentar -"
+            ],
+            "flags": 0,
+            "guid": "eff99955-b647-4c86-9ef9-5dd5a9b9a013",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar",
+                "Literal (Physical force): To break, smash, or snap. (e.g., \"arrebentar uma corda\" - to snap a rope)."
+            ],
+            "flags": 0,
+            "guid": "0389a491-6056-4754-b868-065cdafe64b9",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar",
+                "Internal pressure: To burst or explode. (e.g., \"o pneu arrebentou\" - the tire burst)."
+            ],
+            "flags": 0,
+            "guid": "a8c27092-521f-48a2-8be0-1572bcc9dfb0",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar",
+                "Violence: To smash in or beat up. (e.g., \"arrebentar a cara de alguém\" - to smash someone's face in)"
+            ],
+            "flags": 0,
+            "guid": "31dbcb55-1799-46d6-b633-8142b6660294",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar",
+                "Success/Excelling: In Brazilian Portuguese slang, it means to succeed brilliantly, \"kick ass,\" or \"kill it\". (e.g., \"o show vai arrebentar\" - the show is going to be amazing / a huge success)."
+            ],
+            "flags": 0,
+            "guid": "fcac2cf4-67fb-4f52-83b9-c9569a495674",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "arrebentar",
+                "Overwhelming fatigue: To feel exhausted or overwhelmed. (e.g., \"estou arrebentado\" - I am completely exhausted / worn out)."
+            ],
+            "flags": 0,
+            "guid": "ee48c1cb-a4c6-4ec3-9d06-085c280d67a8",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Portuguese",
+                "en",
+                "coxa",
+                "thigh"
+            ],
+            "flags": 0,
+            "guid": "b632a6de-0c86-4e26-adfa-53999509bc70",
+            "note_model_uuid": "language_model_uuid_1234",
+            "tags": [
+                "portuguese"
+            ]
         }
     ]
 }

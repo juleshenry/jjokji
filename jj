@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 import csv
+from datetime import datetime
 import os
+import re
 import shutil
 import subprocess
 import sys
 import uuid
 
 
-REPOS = {
+SIBLING_REPOS = {
     "french_notes": "https://github.com/juleshenry/french_notes.git",
     "korean_notes": "https://github.com/juleshenry/korean_notes.git",
     "portuguese_notes": "https://github.com/juleshenry/portuguese_notes.git",
     "castellano_notes": "https://github.com/juleshenry/castellano_notes.git",
-    "all_lang_notes": "https://github.com/juleshenry/all_lang_notes.git",
 }
 
 LANG_MAP = {
@@ -20,6 +21,48 @@ LANG_MAP = {
     "fr": ("French", "french_notes"),
     "kr": ("Korean", "korean_notes"),
     "es": ("Castellano", "castellano_notes"),
+}
+
+DEFAULT_TRANSLATION_LANG = "en"
+
+LANG_NAME_TO_CODE = {
+    "portuguese": "pt",
+    "portugues": "pt",
+    "portuguese brasil": "pt",
+    "english": "en",
+    "french": "fr",
+    "korean": "kr",
+    "spanish": "es",
+    "castellano": "es",
+}
+
+GOOGLE_TRANSLATE_SECTION_HEADERS = {
+    "translations of",
+    "more meanings for",
+    "noun",
+    "verb",
+    "adjective",
+    "adverb",
+    "pronoun",
+    "preposition",
+    "conjunction",
+    "interjection",
+    "phrase",
+    "example",
+    "examples",
+    "synonyms",
+}
+
+GOOGLE_TRANSLATE_POS_HEADERS = {
+    "noun",
+    "verb",
+    "adjective",
+    "adverb",
+    "pronoun",
+    "preposition",
+    "conjunction",
+    "interjection",
+    "phrase",
 }
 
 
@@ -36,9 +79,13 @@ def repo_path(name: str, root: str | None = None) -> str:
     return os.path.join(base, name)
 
 
+def all_lang_root() -> str:
+    return os.path.join(script_dir(), "all_lang_notes")
+
+
 def missing_repos(root: str | None = None) -> list[str]:
     base = root or workspace_root()
-    return [name for name in REPOS if not os.path.isdir(repo_path(name, base))]
+    return [name for name in SIBLING_REPOS if not os.path.isdir(repo_path(name, base))]
 
 
 def brainbrew_ok() -> bool:
@@ -60,27 +107,113 @@ def print_usage() -> None:
     print("  jj doctor")
     print("  jj bootstrap")
     print("  jj add <lang> <translation_lang> <front> <back>")
+    print("  jj add <lang> <front> <back>")
     print("  jj <lang> <translation_lang> <front> <back>")
+    print("  jj <lang> <front> <back>")
+    print("  jj <lang> <front> -     # read back from stdin")
+    print('  jj "Portuguese - detected\nEnglish\nalheia\nalien"')
     print('Example: jj pt en "convite" "invitation"')
+    print('Default target language: en, so `jj pt "convite" "invitation"` also works')
+
+
+def read_stdin_back_if_needed(back: str) -> str:
+    if back != "-":
+        return back
+    return sys.stdin.read().strip()
+
+
+def normalize_language_name(value: str) -> str:
+    cleaned = value.strip().lower()
+    cleaned = cleaned.replace("(detected)", "")
+    cleaned = cleaned.replace("- detected", "")
+    cleaned = cleaned.replace("detected", "")
+    cleaned = re.sub(r"[^a-z\s]", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return cleaned
+
+
+def language_code_from_name(value: str) -> str | None:
+    normalized = normalize_language_name(value)
+    return LANG_NAME_TO_CODE.get(normalized)
+
+
+def is_google_translate_section_header(value: str) -> bool:
+    normalized = normalize_language_name(value)
+    return any(
+        normalized == header or normalized.startswith(f"{header} ")
+        for header in GOOGLE_TRANSLATE_SECTION_HEADERS
+    )
+
+
+def collect_google_translate_back_lines(parts: list[str]) -> list[str]:
+    back_lines = [parts[3]]
+    in_dictionary = False
+    expect_translation = False
+
+    for part in parts[4:]:
+        normalized = normalize_language_name(part)
+
+        if normalized.startswith("translations of ") or normalized.startswith("more meanings for "):
+            in_dictionary = True
+            expect_translation = False
+            continue
+
+        if normalized in GOOGLE_TRANSLATE_POS_HEADERS:
+            in_dictionary = True
+            expect_translation = True
+            continue
+
+        if normalized in {"example", "examples", "synonyms"}:
+            break
+
+        if not in_dictionary:
+            continue
+
+        if expect_translation:
+            if part not in back_lines:
+                back_lines.append(part)
+            expect_translation = False
+        else:
+            expect_translation = True
+
+    return back_lines
 
 
 def doctor(root: str | None = None) -> int:
     base = root or workspace_root()
     print(f"workspace: {base}")
     missing = missing_repos(base)
-    for name in REPOS:
+    for name in SIBLING_REPOS:
         status = "ok" if name not in missing else "missing"
         print(f"{status:7} {repo_path(name, base)}")
+
+    all_lang_status = "ok" if os.path.isdir(all_lang_root()) else "missing"
+    print(f"{all_lang_status:7} {all_lang_root()}")
 
     brew_status = "ok" if brainbrew_ok() else "missing"
     print(f"{brew_status:7} brainbrew")
 
-    return 0 if not missing and brainbrew_ok() else 1
+    return 0 if not missing and os.path.isdir(all_lang_root()) and brainbrew_ok() else 1
 
 
 def prompt_yes_no(prompt: str) -> bool:
     answer = input(prompt).strip().lower()
     return answer in ("", "y", "yes")
+
+
+def existing_note_keys(csv_file: str) -> set[tuple[str, str, str, str]]:
+    if not os.path.isfile(csv_file):
+        return set()
+
+    keys: set[tuple[str, str, str, str]] = set()
+    with open(csv_file, newline="", encoding="utf-8") as handle:
+        reader = csv.reader(handle)
+        next(reader, None)
+        for row in reader:
+            if len(row) < 5:
+                continue
+            keys.add((row[1], row[2], row[3], row[4]))
+    return keys
 
 
 def bootstrap() -> int:
@@ -100,7 +233,7 @@ def bootstrap() -> int:
         return 1
 
     for name in missing:
-        url = REPOS[name]
+        url = SIBLING_REPOS[name]
         target = repo_path(name, base)
         result = subprocess.run(["gh", "repo", "clone", url.removesuffix(".git"), target], text=True)
         if result.returncode != 0:
@@ -124,9 +257,13 @@ def ensure_ready() -> tuple[str, str, str]:
         print("brainbrew is missing")
         raise SystemExit(1)
 
+    if not os.path.isdir(all_lang_root()):
+        print(f"missing internal deck repo: {all_lang_root()}")
+        raise SystemExit(1)
+
     return (
         base,
-        repo_path("all_lang_notes", base),
+        all_lang_root(),
         brainbrew_command(),
     )
 
@@ -136,10 +273,39 @@ def append_markdown(md_file: str, translation_lang: str, front: str, back: str) 
         handle.write(f"\n## {front}\n**{translation_lang}**: {back}\n")
 
 
-def append_csv(csv_file: str, language: str, translation_lang: str, front: str, back: str) -> None:
+def notes_markdown_file(notes_repo_root: str) -> str:
+    date_stamp = datetime.now().astimezone().date().isoformat()
+    return os.path.join(notes_repo_root, f"jjokji_notes_{date_stamp}.md")
+
+
+def split_back_segments(back: str) -> list[str]:
+    normalized = re.sub(r"(?:^|\s+)\d+[.)]\s+", "\n", back.strip())
+    parts: list[str] = []
+    for line in normalized.splitlines():
+        for segment in line.split(";"):
+            cleaned = segment.strip()
+            if cleaned:
+                parts.append(cleaned)
+    return parts or [back]
+
+
+def append_csv(csv_file: str, language: str, translation_lang: str, front: str, back: str) -> int:
+    segments = split_back_segments(back)
     with open(csv_file, "a", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
-        writer.writerow([str(uuid.uuid4()), language, translation_lang, front, back, language.lower()])
+        for segment in segments:
+            writer.writerow([str(uuid.uuid4()), language, translation_lang, front, segment, language.lower()])
+    return len(segments)
+
+
+def find_exact_duplicates(csv_file: str, language: str, translation_lang: str, front: str, back: str) -> list[str]:
+    existing = existing_note_keys(csv_file)
+    duplicates: list[str] = []
+    for segment in split_back_segments(back):
+        key = (language, translation_lang, front, segment)
+        if key in existing:
+            duplicates.append(segment)
+    return duplicates
 
 
 def rebuild(all_lang_root: str, brainbrew: str) -> int:
@@ -171,16 +337,54 @@ def add_note(lang: str, translation_lang: str, front: str, back: str) -> int:
 
     base, all_lang_root, brainbrew = ensure_ready()
     language_name, repo_name = LANG_MAP[lang]
-    md_file = os.path.join(repo_path(repo_name, base), "jjokji_notes.md")
+    md_file = notes_markdown_file(repo_path(repo_name, base))
     csv_file = os.path.join(all_lang_root, "src", "data", "LanguageNotes.csv")
+
+    duplicates = find_exact_duplicates(csv_file, language_name, translation_lang, front, back)
+    if duplicates:
+        print("exact duplicate note(s) found:")
+        for duplicate in duplicates:
+            print(f"- {front} -> {duplicate}")
+        if not prompt_yes_no("Write anyway? [y/N] "):
+            print("cancelled")
+            return 1
 
     append_markdown(md_file, translation_lang, front, back)
     print(f"updated {md_file}")
 
-    append_csv(csv_file, language_name, translation_lang, front, back)
-    print(f"updated {csv_file}")
+    segment_count = append_csv(csv_file, language_name, translation_lang, front, back)
+    print(f"updated {csv_file} with {segment_count} segment(s)")
 
     return rebuild(all_lang_root, brainbrew)
+
+
+def parse_google_translate_blob(blob: str) -> tuple[str, str, str, str] | None:
+    parts = [part.strip() for part in blob.splitlines() if part.strip()]
+    if len(parts) < 4:
+        return None
+
+    source_lang = language_code_from_name(parts[0])
+    translation_lang = language_code_from_name(parts[1])
+    if source_lang is None or translation_lang is None:
+        return None
+
+    front = parts[2]
+    back_lines = collect_google_translate_back_lines(parts)
+    back = "\n".join(back_lines)
+    return source_lang, translation_lang, front, back
+
+
+def parse_add_args(args: list[str]) -> tuple[str, str, str, str] | None:
+    if len(args) == 1:
+        return parse_google_translate_blob(args[0])
+
+    if len(args) == 3:
+        return args[0], DEFAULT_TRANSLATION_LANG, args[1], read_stdin_back_if_needed(args[2])
+
+    if len(args) == 4:
+        return args[0], args[1], args[2], read_stdin_back_if_needed(args[3])
+
+    return None
 
 
 def main() -> int:
@@ -198,13 +402,15 @@ def main() -> int:
         return bootstrap()
 
     if command == "add":
-        if len(args) != 5:
+        parsed = parse_add_args(args[1:])
+        if parsed is None:
             print_usage()
             return 1
-        return add_note(args[1], args[2], args[3], args[4])
+        return add_note(*parsed)
 
-    if len(args) == 4:
-        return add_note(args[0], args[1], args[2], args[3])
+    parsed = parse_add_args(args)
+    if parsed is not None:
+        return add_note(*parsed)
 
     print_usage()
     return 1
