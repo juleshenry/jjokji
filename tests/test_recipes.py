@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import csv
+import contextlib
 from datetime import datetime
 import importlib.util
+import io
 import json
 import shutil
 import subprocess
@@ -219,6 +221,51 @@ def test_notes_markdown_file_uses_local_date_stamp(tmp_path: Path) -> None:
     assert jj.notes_markdown_file(str(tmp_path)) == str(
         tmp_path / f"jjokji_notes_{date_stamp}.md"
     )
+
+
+def test_doctor_lists_discovered_notes_repos_only(tmp_path: Path) -> None:
+    jj = load_jj_module()
+    (tmp_path / "portuguese_notes").mkdir()
+    (tmp_path / "french_notes").mkdir()
+    (tmp_path / "random_folder").mkdir()
+
+    output = io.StringIO()
+    with contextlib.redirect_stdout(output):
+        status = jj.doctor(str(tmp_path))
+
+    rendered = output.getvalue()
+    assert status == 0
+    assert f"ok      {tmp_path / 'french_notes'}" in rendered
+    assert f"ok      {tmp_path / 'portuguese_notes'}" in rendered
+    assert "castellano_notes" not in rendered
+    assert "random_folder" not in rendered
+
+
+def test_add_note_only_requires_target_repo(tmp_path: Path) -> None:
+    jj = load_jj_module()
+    workspace = tmp_path / "workspace"
+    workspace.mkdir()
+
+    (workspace / "portuguese_notes").mkdir()
+    shutil.copytree(REPO_ROOT / "all_lang_notes", workspace / "jjokji" / "all_lang_notes")
+
+    original_workspace_root = jj.workspace_root
+    original_brainbrew_command = jj.brainbrew_command
+    original_rebuild = jj.rebuild
+    try:
+        jj.workspace_root = lambda: str(workspace)
+        jj.brainbrew_command = lambda: "brainbrew"
+        jj.rebuild = lambda all_lang_root, brainbrew: 0
+
+        result = jj.add_note("pt", "en", "convite_teste_unico", "invitation unique")
+
+        assert result == 0
+        date_stamp = datetime.now().astimezone().date().isoformat()
+        assert (workspace / "portuguese_notes" / f"jjokji_notes_{date_stamp}.md").exists()
+    finally:
+        jj.workspace_root = original_workspace_root
+        jj.brainbrew_command = original_brainbrew_command
+        jj.rebuild = original_rebuild
 
 
 def test_jj_command_splits_multiline_back_into_multiple_cards(tmp_path: Path) -> None:

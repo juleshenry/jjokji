@@ -16,6 +16,8 @@ SIBLING_REPOS = {
     "castellano_notes": "https://github.com/juleshenry/castellano_notes.git",
 }
 
+NOTES_REPO_SUFFIX = "_notes"
+
 LANG_MAP = {
     "pt": ("Portuguese", "portuguese_notes"),
     "fr": ("French", "french_notes"),
@@ -83,9 +85,20 @@ def all_lang_root() -> str:
     return os.path.join(script_dir(), "all_lang_notes")
 
 
+def notes_repos(root: str | None = None) -> list[str]:
+    base = root or workspace_root()
+    if not os.path.isdir(base):
+        return []
+    return sorted(
+        name
+        for name in os.listdir(base)
+        if name.endswith(NOTES_REPO_SUFFIX) and os.path.isdir(repo_path(name, base))
+    )
+
+
 def missing_repos(root: str | None = None) -> list[str]:
     base = root or workspace_root()
-    return [name for name in SIBLING_REPOS if not os.path.isdir(repo_path(name, base))]
+    return [name for name in SIBLING_REPOS if name not in notes_repos(base)]
 
 
 def brainbrew_ok() -> bool:
@@ -182,10 +195,9 @@ def collect_google_translate_back_lines(parts: list[str]) -> list[str]:
 def doctor(root: str | None = None) -> int:
     base = root or workspace_root()
     print(f"workspace: {base}")
-    missing = missing_repos(base)
-    for name in SIBLING_REPOS:
-        status = "ok" if name not in missing else "missing"
-        print(f"{status:7} {repo_path(name, base)}")
+    discovered = notes_repos(base)
+    for name in discovered:
+        print(f"{'ok':7} {repo_path(name, base)}")
 
     all_lang_status = "ok" if os.path.isdir(all_lang_root()) else "missing"
     print(f"{all_lang_status:7} {all_lang_root()}")
@@ -193,7 +205,7 @@ def doctor(root: str | None = None) -> int:
     brew_status = "ok" if brainbrew_ok() else "missing"
     print(f"{brew_status:7} brainbrew")
 
-    return 0 if not missing and os.path.isdir(all_lang_root()) and brainbrew_ok() else 1
+    return 0 if discovered and os.path.isdir(all_lang_root()) and brainbrew_ok() else 1
 
 
 def prompt_yes_no(prompt: str) -> bool:
@@ -245,12 +257,9 @@ def bootstrap() -> int:
 
 def ensure_ready() -> tuple[str, str, str]:
     base = workspace_root()
-    missing = missing_repos(base)
-    if missing:
-        print("missing sibling repos:")
-        for name in missing:
-            print(f"- {name}")
-        print("run `jj bootstrap` first")
+    if not notes_repos(base):
+        print("missing sibling note repos:")
+        print(f"- expected at least one *{NOTES_REPO_SUFFIX} directory in {base}")
         raise SystemExit(1)
 
     if not brainbrew_ok():
@@ -337,6 +346,10 @@ def add_note(lang: str, translation_lang: str, front: str, back: str) -> int:
 
     base, all_lang_root, brainbrew = ensure_ready()
     language_name, repo_name = LANG_MAP[lang]
+    if not os.path.isdir(repo_path(repo_name, base)):
+        print(f"missing target repo: {repo_path(repo_name, base)}")
+        print("run `jj bootstrap` first")
+        return 1
     md_file = notes_markdown_file(repo_path(repo_name, base))
     csv_file = os.path.join(all_lang_root, "src", "data", "LanguageNotes.csv")
 
