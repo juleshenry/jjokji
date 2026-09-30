@@ -322,7 +322,7 @@ def rebuild(all_lang_root: str, brainbrew: str) -> int:
     local_bin_dir = os.path.expanduser("~/.local/bin")
     env["PATH"] = env.get("PATH", "") + os.pathsep + local_bin_dir
     result = subprocess.run(
-        [brainbrew, "run", "recipes/source_to_anki.yaml"],
+        [sys.executable, os.path.join(all_lang_root, "scripts", "build_anki.py")],
         cwd=all_lang_root,
         env=env,
         capture_output=True,

@@ -1,0 +1,77 @@
+{
+  "rules": [
+    {
+      "front": "première partie I",
+      "guid": "66649764-dca1-4375-bf9d-531cff86a9df",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "première partie II",
+      "guid": "41381813-066f-4976-ba25-6ca1527b2feb",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "première partie III",
+      "guid": "34f44c41-a167-49a1-a1d0-fbecbd7ae9ed",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "première partie IV",
+      "guid": "d5aff35a-423c-4514-af61-0de339b6b3d3",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "première partie V",
+      "guid": "d81e99ed-247f-4c81-9eca-0a971e755aee",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "première partie VI",
+      "guid": "7c39bf86-fd74-4e63-913c-286751a85a19",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "deuxième partie III",
+      "guid": "ef459a71-0a0a-4fa8-81d9-bfbe4721d251",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "deuxième partie IV",
+      "guid": "24e1a873-f8e5-4890-a506-e9d6dcb8931d",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "deuxième partie V",
+      "guid": "c6c095c4-f541-4c9c-aad4-e4f7469e337e",
+      "mode": "split",
+      "max_lines": 50
+    },
+    {
+      "front": "2023-06-16 top-100-albums",
+      "guid": "dedf447c-42c0-48b9-8dfd-3383e52e2547",
+      "mode": "ignore"
+    },
+    {
+      "front": "2023-06-16 top-100-words",
+      "guid": "a1d0906e-be93-4a94-8aa4-0dc3adf3893c",
+      "mode": "split",
+      "split_mode": "markdown_table_rows",
+      "table_rows_per_chunk": 25
+    },
+    {
+      "front": "2023-06-16 verb-conjugations",
+      "guid": "476dfc4a-5c10-4291-9447-8b2f14e7ddde",
+      "mode": "split",
+      "split_mode": "markdown_sections",
+      "heading_prefix": "## "
+    }
+  ]
+}

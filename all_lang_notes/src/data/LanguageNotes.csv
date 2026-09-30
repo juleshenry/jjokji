@@ -1,111 +1,4 @@
 guid,Language,Topic,Front,Back,tags
-dedf447c-42c0-48b9-8dfd-3383e52e2547,French,General Notes,2023-06-16 top-100-albums,"# Top 100 French Albums (Meilleurs Albums Français)
-
-A ranked list of the best French music albums, parsed from a French music publication.
-
-| Rank | Album | Year |
-|------|-------|------|
-| 1 | Histoire de Melody Nelson | 1971 |
-| 2 | Discovery | 2001 |
-| 3 | Fantaisie militaire | 1998 |
-| 4 | L'École du micro d'argent | 1997 |
-| 5 | Ces gens-là | 1966 |
-| 6 | Des visages des figures | 2001 |
-| 7 | 666.667 Club | 1996 |
-| 8 | L'Homme à tête de chou | 1976 |
-| 9 | Moon Safari | 1998 |
-| 10 | Random Access Memories | 2013 |
-| 11 | Il n'y a plus rien | 1973 |
-| 12 | From Mars to Sirius | 2005 |
-| 13 | Tostaky | 1992 |
-| 14 | Bleu pétrole | 2008 |
-| 15 | The Hypnoflip Invasion | 2011 |
-| 16 | Marche à l'ombre | 1980 |
-| 17 | Deux frères | 2019 |
-| 18 | Les Marquises | 1977 |
-| 19 | Mauvais Oeil | 2000 |
-| 20 | Le Chant des sirènes | 2011 |
-| 21 | Où je vis | 1998 |
-| 22 | Initials B.B. | 1968 |
-| 23 | TRINITY | 2020 |
-| 24 | Georges Brassens chante... | 1952 |
-| 25 | L'Autre... | 1991 |
-| 26 | Alive 2007 (Live) | 2007 |
-| 27 | Homework | 1997 |
-| 28 | Volume 11: Fernande | 1972 |
-| 29 | Écailles de lune | 2010 |
-| 30 | Soleil cherche futur | 1982 |
-| 31 | Mekanik Destruktiw Kommandoh | 1973 |
-| 32 | Dans la légende | 2016 |
-| 33 | Comm' si la terre penchait | 2001 |
-| 34 | En passant | 1997 |
-| 35 | TRILOGY | 2015 |
-| 36 | Love on the Beat | 1984 |
-| 37 | Suprême NTM | 1998 |
-| 38 | Stupeflip | 2003 |
-| 39 | Veuillez rendre l'âme | 1989 |
-| 40 | Opéra Puccino | 1998 |
-| 41 | Barbara n°2 | 1965 |
-| 42 | Sauver l'amour | 1985 |
-| 43 | Le Fabuleux Destin d'Amélie Poulain (OST) | 2001 |
-| 44 | La Fête est finie | 2017 |
-| 45 | Kodama | 2016 |
-| 46 | L'Imprudence | 2002 |
-| 47 | Messina | 2012 |
-| 48 | The No Comprendo | 1986 |
-| 49 | Morgane de toi | 1983 |
-| 50 | UNE MAIN LAVE L'AUTRE | 2018 |
-| 51 | Osez Joséphine | 1991 |
-| 52 | Brigitte Fontaine est...? | 1968 |
-| 53 | Non homologué | 1985 |
-| 54 | Nino and Radiah | 1974 |
-| 55 | Ainsi soit je... | 1988 |
-| 56 | Laisse béton | 1977 |
-| 57 | #3 (Ce n'est pas perdu pour tout le monde...) | 1996 |
-| 58 | Mistral gagnant | 1985 |
-| 59 | Amoureux de Paname | 1975 |
-| 60 | La Superbe | 2009 |
-| 61 | Supplique pour être enterré à la plage de Sète | 1966 |
-| 62 | Starmania (OST) | 1978 |
-| 63 | Cross (Justice) | 2007 |
-| 64 | Équinoxe | 1978 |
-| 65 | Les Maledictus Sound | 1968 |
-| 66 | C'est déjà ça | 1993 |
-| 67 | Chants pour le delta, la lune et le soleil | 1976 |
-| 68 | Alertez les bébés! | 1976 |
-| 69 | Louise attaque | 1997 |
-| 70 | Samedi soir sur la Terre | 1994 |
-| 71 | Vive la vie | 2004 |
-| 72 | Georges Brassens interprète ses dernières compositions | 1953 |
-| 73 | Innamoramento | 1999 |
-| 74 | ...tout corps vivant branché sur le secteur... | 1978 |
-| 75 | Chatterton | 1994 |
-| 76 | Temps mort | 2002 |
-| 77 | Bonnie and Clyde | 1968 |
-| 78 | Stup Religion | 2005 |
-| 79 | Human After All | 2005 |
-| 80 | Perdu d'avance | 2009 |
-| 81 | Les Voyages de l'âme | 2012 |
-| 82 | Wolfgang Amadeus Phoenix | 2009 |
-| 83 | Anamorphosée | 1995 |
-| 84 | Murmuüre | 2010 |
-| 85 | Hurry Up, We're Dreaming | 2011 |
-| 86 | Les Étoiles vagabondes / Expansion | 2019 |
-| 87 | La Marmaille nue | 1993 |
-| 88 | Royaume de Siam | 1979 |
-| 89 | Corps & armes | 2000 |
-| 90 | L'Enfant assassin des mouches | 1972 |
-| 91 | La Mort d'Orion | 1970 |
-| 92 | Jacques Dutronc | 1966 |
-| 93 | Les Mots bleus | 1974 |
-| 94 | Before the Dawn Heals Us | 2005 |
-| 95 | Georges Brassens | 2000 |
-| 96 | Magma | 2016 |
-| 97 | Les Chansons de l'innocence retrouvée | 2013 |
-| 98 | Première Consultation | 1996 |
-| 99 | Léo chante Ferré: Léo chante amour anarchie | 2005 |
-| 100 | Varsovie / L'Alhambra / Paris | 2008 |
-",french
 dbc5374e-ccd0-4347-bc8f-e5d105927a0e,French,General Notes,2023-06-16 miscellaneous-phrases,"# Miscellaneous Phrases (Expressions Diverses)
 
 | French | English |
@@ -130,977 +23,6 @@ dbc5374e-ccd0-4347-bc8f-e5d105927a0e,French,General Notes,2023-06-16 miscellaneo
 | toujours | always |
 ",french
 419d2ac2-c4af-4b4d-9ff0-0dba66af257f,French,General Notes,2023-04-11 bonjour,"bonjour
-",french
-a1d0906e-be93-4a94-8aa4-0dc3adf3893c,French,General Notes,2023-06-16 top-100-words,"# The 100 Most Common French Words (Les 100 Mots Les Plus Courants)
-
-| # | French | English |
-|---|--------|---------|
-| 1 | le | the |
-| 2 | de | of |
-| 3 | un | a/an |
-| 4 | être | to be |
-| 5 | et | and |
-| 6 | à | to/at/in |
-| 7 | il | he/it |
-| 8 | avoir | to have |
-| 9 | ne | not |
-| 10 | en | in/while |
-| 11 | se | oneself/each other |
-| 12 | qui | who/that |
-| 13 | dans | in/into/within |
-| 14 | ce | this/that |
-| 15 | que | that/which |
-| 16 | pas | not |
-| 17 | pour | for/to/in order to |
-| 18 | sur | on/upon/over |
-| 19 | par | by/through |
-| 20 | avec | with |
-| 21 | dire | to say/tell |
-| 22 | faire | to do/make |
-| 23 | plus | more |
-| 24 | pouvoir | to be able to/can |
-| 25 | aller | to go |
-| 26 | voir | to see |
-| 27 | mettre | to put/lay/set |
-| 28 | au | to the |
-| 29 | jour | day |
-| 30 | comme | like/as |
-| 31 | prendre | to take |
-| 32 | temps | time/weather |
-| 33 | deux | two |
-| 34 | très | very |
-| 35 | savoir | to know (how) |
-| 36 | même | same/even |
-| 37 | sans | without |
-| 38 | ans | years |
-| 39 | travail | work |
-| 40 | vie | life |
-| 41 | nouveau | new |
-| 42 | après | after |
-| 43 | monde | world |
-| 44 | notre | our |
-| 45 | aussi | also/too |
-| 46 | donner | to give |
-| 47 | bien | well/good |
-| 48 | venir | to come |
-| 49 | sous | under/below |
-| 50 | premier | first |
-| 51 | grand | big/large |
-| 52 | année | year |
-| 53 | maintenant | now |
-| 54 | place | place/seat |
-| 55 | contre | against |
-| 56 | autre | other/another |
-| 57 | encore | again/still |
-| 58 | politique | political |
-| 59 | avant | before |
-| 60 | chose | thing |
-| 61 | comprendre | to understand |
-| 62 | partir | to leave |
-| 63 | revoir | to see again |
-| 64 | pendant | during/while |
-| 65 | suivre | to follow |
-| 66 | point | point/dot |
-| 67 | alors | then/so |
-| 68 | petit | small/little |
-| 69 | dernier | last |
-| 70 | mais | but |
-| 71 | arriver | to arrive |
-| 72 | jouer | to play |
-| 73 | état | state |
-| 74 | près | near/close |
-| 75 | jeune | young |
-| 76 | regarder | to look/watch |
-| 77 | deuxième | second |
-| 78 | possible | possible |
-| 79 | famille | family |
-| 80 | entre | between/among |
-| 81 | suivant | following/next |
-| 82 | vrai | true |
-| 83 | jamais | never |
-| 84 | groupe | group |
-| 85 | plusieurs | several |
-",french
-476dfc4a-5c10-4291-9447-8b2f14e7ddde,French,General Notes,2023-06-16 verb-conjugations,"# Verb Conjugations (Conjugaisons)
-
-Practice conjugations of three regular French verbs across all major tenses.
-
-## ATTENDRE (to wait) -- 3rd group (-re)
-
-| Tense | je | tu | il/elle | nous | vous | ils/elles |
-|-------|----|----|---------|------|------|-----------|
-| Présent | j'attends | tu attends | il attend | nous attendons | vous attendez | ils attendent |
-| Imparfait | j'attendais | tu attendais | il attendait | nous attendions | vous attendiez | ils attendaient |
-| Futur | j'attendrai | tu attendras | elle attendra | nous attendrons | vous attendrez | ils attendront |
-| Conditionnel | j'attendrais | tu attendrais | elle attendrait | nous attendrions | vous attendriez | ils attendraient |
-| Passé composé | j'ai attendu | tu as attendu | il a attendu | nous avons attendu | vous avez attendu | ils ont attendu |
-| Subjonctif | que j'attende | que tu attendes | qu'il attende | que nous attendions | que vous attendiez | qu'elles attendent |
-
-**Impératif:** attends, attendons, attendez
-**Participe présent:** attendant
-**Participe passé:** attendu
-
----
-
-## FINIR (to finish) -- 2nd group (-ir)
-
-| Tense | je | tu | il/elle | nous | vous | ils/elles |
-|-------|----|----|---------|------|------|-----------|
-| Présent | je finis | tu finis | il finit | nous finissons | vous finissez | ils finissent |
-| Imparfait | je finissais | tu finissais | il finissait | nous finissions | vous finissiez | ils finissaient |
-| Futur | je finirai | tu finiras | elle finira | nous finirons | vous finirez | ils finiront |
-| Conditionnel | je finirais | tu finirais | elle finirait | nous finirions | vous finiriez | ils finiraient |
-| Passé composé | j'ai fini | tu as fini | il a fini | nous avons fini | vous avez fini | ils ont fini |
-| Subjonctif | que je finisse | que tu finisses | qu'il finisse | que nous finissions | que vous finissiez | qu'elles finissent |
-
-**Impératif:** finis, finissons, finissez
-**Participe présent:** finissant
-**Participe passé:** fini
-
----
-
-## PARLER (to speak) -- 1st group (-er)
-
-| Tense | je | tu | il/elle | nous | vous | ils/elles |
-|-------|----|----|---------|------|------|-----------|
-| Présent | je parle | tu parles | il parle | nous parlons | vous parlez | ils parlent |
-| Imparfait | je parlais | tu parlais | il parlait | nous parlions | vous parliez | ils parlaient |
-| Futur | je parlerai | tu parleras | elle parlera | nous parlerons | vous parlerez | ils parleront |
-| Conditionnel | je parlerais | tu parlerais | elle parlerait | nous parlerions | vous parleriez | ils parleraient |
-| Passé composé | j'ai parlé | tu as parlé | il a parlé | nous avons parlé | vous avez parlé | ils ont parlé |
-| Subjonctif | que je parle | que tu parles | qu'il parle | que nous parlions | que vous parliez | qu'ils parlent |
-
-**Impératif:** parle, parlons, parlez
-**Participe présent:** parlant
-**Participe passé:** parlé
-",french
-34f44c41-a167-49a1-a1d0-fbecbd7ae9ed,French,General Notes,première partie III,"tromper -> to deceive
-connaissements -> bills of lading
-s'amoncelaient -> were piling up
-brûlant -> burning
-chaînes -> chains
-noyé -> drowned
-poussière -> dust
-mâts -> masts
-élan -> momentum
-treuils -> winches
-longions -> we were following
-pavés -> cobblestones
-inégaux -> uneven
-haleine -> breath
-quais -> docks
-heurté -> hit
-palier -> landing
-l'épagneul -> the spaniel
-poils -> hairs
-rougeâtres -> reddish
-mène -> leads
-bute -> hits
-bat -> beats
-rampe -> railing
-frayeur -> fright
-terreur -> terror
-haine -> hatred
-par hasard -> by chance
-d'ailleurs -> besides
-gémissait -> was groaning
-devinais -> guessed
-penché -> leaned
-bête -> beast
-métier -> trade
-pourtant -> however
-guère -> hardly
-dégoûtait -> disgusted
-boudin -> pudding
-ceau -> basin
-m'éviterait -> would avoid me
-ange -> angel
-stuc -> stucco
-défait -> undone
-sale -> dirty
-pansement -> dressing
-douteux -> doubtful
-cherchait -> was looking for
-bagarre -> fight
-méchant -> mean
-ça vaut mieux -> it's better that way
-tombé -> fell
-relever -> to pick up
-coup de genou -> knee hit
-taquets -> cleats
-compte -> account
-pansement -> dressing
-égal -> equal
-poêle -> stove
-mangeant -> eating
-installés -> settled
-autant -> as much
-entretenue -> maintained
-tromperie -> deceit
-mois-ci -> this month
-loyer -> rent
-modde-piéte -> doormat
-tapée -> batch
-bonheur -> happiness
-jusqu'au -> until
-auparavant -> before
-volets -> shutters
-punie -> punished
-charbonnait -> was charring
-restait -> remained
-emportaient -> were carrying away
-lointains -> distant
-coït -> coitus
-l'emmener -> to take him/her
-mœurs -> morals
-réfléchir -> to reflect
-punir -> to punish
-découvert -> discovered
-cracherait -> would spit
-mettrait -> would put
-dehors -> outside
-rédiger -> to write
-assiettes -> plates
-soigneusement -> carefully
-toile -> canvas
-tiroir -> drawer
-feuille -> sheet
-quadrillé -> squared
-encrier -> inkwell
-carré -> square
-d'encre -> ink
-hochant -> nodding
-tutoyait -> was addressing informally
-frappé -> struck
-cacheté -> sealed
-glissement -> sliding
-sommeil -> sleep
-palier -> landing
-cage -> cage
-d'escalier -> of stairs
-bourdonnait -> was buzzing
-souffle -> breath
-gémissait -> was groaning
-",french
-24e1a873-f8e5-4890-a506-e9d6dcb8931d,French,General Notes,deuxième partie IV,"plaidoiries -> pleadings
-gênait -> bothered
-démontrer -> demonstrate
-preuve -> proof
-l'éclairage -> lighting
-fournira -> will provide
-âme -> soul
-événements -> events
-manquait -> was missing
-besogne -> task
-moi j'écoutais -> I was listening
-seule -> alone
-ému -> moved
-m'accabler -> overwhelm me
-mais tant d'acharnement m'étonnait -> but such perseverance surprised me
-muer -> to change
-saurions -> would know
-gouffre -> abyss
-selon -> according to
-osait -> dared
-faiblesse -> weakness
-cédait -> yielded
-craignait -> feared
-ressentait -> felt
-tuait -> killed
-meurtrière -> murderer
-son devoir -> his duty
-léger -> light
-ressens -> feel
-mêlant -> mixing
-donné -> given
-penché -> leaned
-plaidé -> pleaded
-honnête -> honest
-soutenu -> supported
-m'étonne -> surprises me
-mené -> led
-je me souviens -> I remember
-assailli -> assaulted
-m'appartenait -> belonged to me
-gorge -> throat
-traînais -> dragged
-châtiments -> punishments
-douceur -> sweetness
-souriait -> smiled
-meurtre -> murder
-cassation -> appeal
-éloignés -> distant
-pourvoi -> appeal
-tranchée -> trench
-lisais -> was reading
-emmené -> taken
-recevoir -> receive",french
-7c39bf86-fd74-4e63-913c-286751a85a19,French,General Notes,première partie VI,"secoue -> shakes
-amer -> bitter
-toile -> canvas
-lâché -> let go
-témoigné -> testified
-se dépêcher -> to hurry
-pierres -> stones
-jaunâtres -> yellowish
-asphodèles -> asphodels
-cirée -> waxed
-éparpiller -> scatter
-enfouies -> buried
-cap -> cape
-chalutier -> trawler
-cueilli -> picked
-pilotis -> stilts
-friture -> frying
-jolie -> pretty
-épatante -> amazing
-éprouver -> to feel
-tic -> tic
-plongé -> plunged
-jeté -> thrown
-nageait -> was swimming
-écartait -> was moving aside
-coulaient -> were flowing
-voiles -> sails
-paraissait -> appeared
-battant -> flapping
-plat -> flat
-visqueuse -> viscous
-chaleurs -> heats
-secoué -> shaken
-déjeuner -> lunch
-étaler -> spread
-déjà -> already
-plaisais -> pleased
-étonnés -> surprised
-vaisselle -> dishes
-surplombaient -> overhung
-chaleur -> heat
-vécu -> lived
-moitié -> half
-nue -> naked
-bagarre -> fight
-surchauffé -> overheated
-ralenti -> slowed
-bulles -> bubbles
-couteau -> knife
-tailladée -> slashed
-osé -> dared
-bouger -> to move
-tenir -> to hold
-enfuis -> fled
-cloués -> nailed
-serré -> tight
-dégouttant -> dripping
-soutenu -> sustained
-roseau -> reed
-écrasant -> crushing
-brisait -> was breaking
-source -> source
-graisseux -> greasy
-l'œil -> the eye
-glissé -> slipped
-bois -> wood
-retentissante -> resounding
-pénible -> painful
-haletait -> was panting
-gonfler -> to swell
-poings -> fists
-ivresse -> drunkenness
-coquillage -> seashell
-jaillie -> sprang
-crispaient -> were tensing
-aveuglant -> blinding
-fuir -> to flee
-eau -> water
-dos -> back
-soulevé -> lifted
-veston -> jacket
-paupières -> eyelids
-n'avançait -> did not advance
-l'ancre -> the anchor
-tache -> stain
-j'en ai deviné -> I guessed
-demi-tour -> U-turn
-brûlure -> burn
-joues -> cheeks
-j'ai fait un pas, un seul pas en avant -> I took a step, just one step forward
-l'acier -> steel
-giclé -> spurted
-étincelante -> sparkling
-tiède -> lukewarm
-épais -> thick
-cymbales -> cymbals
-glaive -> sword
-jailli -> sprang
-rongeait -> was gnawing
-cils -> eyelashes
-charrié -> carried
-pleuvoir -> to rain
-gâchette -> trigger
-ventre -> belly
-crosse -> handle
-assourdissant -> deafening
-balles -> bullets
-brefs -> brief
-parût -> appeared
-malheur -> misfortune
-",french
-c6c095c4-f541-4c9c-aad4-e4f7469e337e,French,General Notes,deuxième partie V,"
-l'aumônier -> the chaplain
-allongé -> lying
-je ne vois que lui -> I only see him
-eussent échappé -> had escaped
-saut -> jump
-l'espoir -> hope
-imperturbable -> unflappable
-je ne l'avais pas connu -> I had not known him
-j'écrasais -> I crushed
-empoisonée -> poisoned
-recroquevillais -> curled up
-couperet -> guillotine
-lequel -> which one
-souhaitât -> would wish
-marchât -> would walk
-accroc -> snag
-machine -> machine
-fusse -> were
-aspect -> appearance
-l'échafaud -> the scaffold
-honte -> shame
-tandis -> while
-l'aube -> dawn
-pourvoi -> appeal
-m'efforçais -> I tried
-je finissais par me dire que... -> I ended up telling myself that...
-contraindre -> to constrain
-l'aube -> dawn
-naisse -> be born
-vitre -> glass
-guettais -> was watching
-rauque -> hoarse
-tout le monde sait que la vie ne vaut pas la peine d'être vécue -> everyone knows that life is not worth living
-dans le fond -> deep down
-bond -> leap
-frottées -> rubbed
-adossé -> leaning
-musclée -> muscular
-cuisses -> thighs
-réellement -> really
-agacement -> irritation
-étroite -> narrow
-remuer -> to move
-s'il n'osait avancer -> if he dared not move forward
-avais-je cherché un visage -> had I sought a face
-fût -> was
-valait -> was worth
-l'aumônier -> the chaplain
-menaçaient -> threatened
-épuisé -> exhausted
-tempes -> temples
-d'étoiles -> of stars
-tendre -> tender
-restait -> remained
-souhaiter -> to wish
-m'accueillent -> welcome me
-cris -> cries
-haine -> hatred
-",french
-66649764-dca1-4375-bf9d-531cff86a9df,French,General Notes,première partie I,"vieillards -> old men
-ainsi -> thus
-veiller -> to watch over
-congé -> leave
-pareille -> similar
-en somme -> in short
-doute -> doubt
-deuil -> mourning
-revêtu -> dressed
-de peine -> of sorrow
-étourdi -> dizzy
-cravate -> tie
-emprunter -> borrow
-brassard -> armband
-couru -> run
-manquer -> miss
-pendant -> during
-presque -> almost
-tassé -> crammed
-chemin -> path
-serré -> tight
-trop -> too
-seul -> alone
-soutien -> support
-reprochait -> reproached
-subvenir -> to meet
-besoins -> needs
-ajouté -> added
-loin -> far
-partager -> share
-eux -> them
-pleurait -> cried
-au bout -> at the end
-dernière -> last
-prenait -> took
-l'écoutais -> listened to him/her
-meurt -> dies
-reprenaient -> resumed
-jacassement -> chatter
-assourdi -> muffled
-perruches -> parakeets
-disparue -> disappeared
-paraît-il -> apparently
-exprimé -> expressed
-remercié -> thanked
-athée -> atheist
-blanchie -> whitened
-chaux -> lime
-recouverte -> covered
-couvercle -> lid
-brou -> pulp
-noix -> nut
-bégayé -> stuttered
-dévisser -> to unscrew
-n'aurais -> would not have
-s'approchait -> approached
-tortillant -> twisting
-arrière -> back
-sortie -> exit
-le tour de la tête -> around the head
-bandeau -> headband
-gênait -> bothered
-l'aurait -> would have
-je me suis souvenu -> I remembered
-surtout -> especially
-courir -> to run
-corbillard -> hearse
-tais-toi -> shut up
-raconter -> to tell
-rougi -> reddened
-indigent -> needy
-garde -> guard
-tombé -> fallen
-épaissie -> thickened
-au-dessus -> above
-aveuglé -> blinded
-l'éclaboussement -> splashing
-soudain -> sudden
-aucune -> none
-chaises -> chairs
-empilé -> piled
-autour -> around
-tasses -> cups
-tricotait -> was knitting
-réchauffé -> reheated
-somnolé -> dozed
-frôlement -> brushing
-éclatante -> dazzling
-courbes -> curves
-dessinaient -> drew
-pureté -> purity
-blessante -> hurtful
-dizaine -> dozen
-glissaient -> slipped
-aveuglante -> blinding
-grinçât -> creak
-m'échappait -> escaped me
-ressortir -> to go out again
-lueur -> glow
-hoché -> nodded
-s'agissait -> it was about
-saluaient -> greeted
-aperçu -> glimpsed
-dodeliner -> to nod
-compagnes -> companions
-affaissés -> slumped
-pleurait -> cried
-bredouillé -> stammered
-liée -> linked
-faisaient -> made
-pénible -> painful
-singulier -> singular
-apercevaient -> perceived
-agrippés -> gripping
-canne -> cane
-crachait -> spat
-mouchoir -> handkerchief
-carreaux -> tiles
-en sortant -> going out
-se promener -> to walk
-auparavant -> before
-rayé -> scratched
-l'espèce -> kind
-suivre -> follow
-vieil -> old
-interdit -> prohibited
-bâtiment -> building
-chœur -> choir
-baissait -> lowered
-coup -> blow
-enfoncées -> embedded
-prêtre -> priest
-prières -> prayers
-bière -> beer/coffin
-drap -> sheet
-suivants -> following
-déléguée -> delegated
-nous avons suivi -> we followed
-feutre -> felt
-calotte -> skullcap
-ronde -> round
-ôté -> removed
-nœud -> knot
-d'étoffe -> fabric
-lèvres -> lips
-ballantes -> dangling
-ourlées -> hemmed
-curé -> parish priest
-fermant -> closing
-chaleur -> heat
-collines -> hills
-menaient -> led
-pays -> country
-devait -> had to
-trêve -> truce
-tressaillir -> to shudder
-nous nous sommes mis en marche -> we started walking
-claudiquait -> limped
-prenait -> took
-vieillard -> old man
-laquelle -> which
-bourdonnait -> buzzed
-crépitements -> crackling
-mouchoir -> handkerchief
-s'essuyait -> was wiping
-crâne -> skull
-montrant -> showing
-tape -> tap
-chiffre -> number
-feutre -> felt
-hâtait -> hurried
-l'éclat -> brightness
-goudron -> tar
-enfonçaient -> sank
-pulpe -> pulp
-cuir -> leather
-bouilli -> boiled
-gluant -> sticky
-terne -> dull
-pétri -> kneaded
-laqué -> lacquered
-crottin -> dung
-vernis -> varnish
-l'encens -> incense
-nuée -> cloud
-chaleur -> heat
-pris -> took
-coupait -> cut
-rattraper -> to catch up
-tournant -> turning
-insolation -> sunstroke
-larmes -> tears
-ruisselaient -> streamed
-rides -> wrinkles
-s'étalaient -> spread
-se rejoignaient -> joined
-détruit -> destroyed
-pantin -> puppet
-racines -> roots
-mêlaient -> mixed
-nid -> nest
-",french
-d5aff35a-423c-4514-af61-0de339b6b3d3,French,General Notes,première partie IV,"raies -> stripes
-resserrée -> tightened
-roseaux -> reeds
-rochers -> rocks
-tiède -> lukewarm
-paresseuses -> lazy
-jouersnageant -> cheeks swimming
-crête -> crest
-dentelle -> lace
-l'écume -> foam
-disparaissait -> disappeared
-mousseuse -> foamy
-retombait -> fell back
-tiede -> lukewarm
-l'amertume -> bitterness
-lèvres -> lips
-rafraîchissait -> refreshed
-jeter -> to throw
-couler -> to flow
-déjeunerions -> would have lunch
-griffes -> claws
-semelles -> soles
-charogne -> carrion
-manches -> sleeves
-éclaté -> burst
-manquer -> to miss
-aiguë -> sharp
-hurlé -> screamed
-empli -> filled
-plombier -> plumber
-locataire -> tenant
-pleuré -> cried
-ouvert -> open
-doucereux -> sweetish
-giflé -> slapped
-volée -> flight
-claque -> slap
-ramasser -> to pick up
-mégot -> cigarette butt
-guignol -> puppet
-maquereau -> pimp
-fermer -> to close
-gueule -> mouth
-soûl -> drunk
-honte -> shame
-trembler -> to tremble
-avis -> opinion
-témoin -> witness
-bordel -> mess
-fine -> fine
-marmonnait -> was mumbling
-fouiller -> to search
-emmené -> taken
-volubilité -> volubility
-baraque -> shack
-foraines -> fairs
-collier -> necklace
-s'égarer -> to get lost
-malgré -> despite
-recueillait -> collected
-croûtes -> scabs
-fourrière -> pound
-crever -> to burst
-souliers -> shoes
-craqué -> cracked
-cloison -> partition
-lendemain -> next day
-",french
-ef459a71-0a0a-4fa8-81d9-bfbe4721d251,French,General Notes,deuxième partie III,"surviendrait -> would occur
-demie -> half
-darmes -> weapons
-remueménage -> hustle and bustle
-menottes -> handcuffs
-jurés -> jurors
-épaient -> spied
-niaise -> naive
-puisque -> since
-belette -> weasel
-engraisée -> fattened
-narquois -> mocking
-bleue -> blue
-témoins -> witnesses
-sein -> breast
-disparaître -> disappear
-moindre -> slightest
-voyais -> saw
-paille -> straw
-tressée -> braided
-aussitôt -> immediately
-agacement -> annoyance
-toussé -> coughed
-feuilleté -> leafed through
-s'éventant -> fanning oneself
-touchaient -> touched
-de fort près -> very close
-soigner -> take care of
-coûté -> cost
-conciliabules -> whisperings
-chaleur -> heat
-munis -> equipped
-plaignait -> complained
-manie -> habit
-plaindre -> pity
-c'est la loi -> it's the law
-un tel éclat -> such a burst
-j'ai senti combien j'etais détesté -> I felt how much I was hated
-posait -> posed
-coupable -> guilty
-d'étonnement -> of amazement
-bruyamment -> noisily
-apprécieront -> will appreciate
-concluront -> will conclude
-soutenir -> support
-m'empêchait -> prevented me
-évanoui -> fainted
-fâché -> angry
-péremptoire -> peremptory
-piquait -> stung
-jetait -> threw
-roulait -> rolled
-panama -> Panama hat
-mettre -> put
-col -> collar
-renfermé prétoire -> courtroom
-coudes -> elbows
-genoux -> knees
-émue -> moved
-sanglots -> sobs
-poursuivie -> pursued
-forçait -> forced
-paraissait -> seemed
-emmené -> taken
-haïr -> to hate
-méfaits -> misdeeds
-giflé -> slapped
-crapuleux -> scoundrel
-débauche -> debauchery
-honteuse -> shameful
-amidonée -> starched
-souteneur -> pimp
-exerçait -> exercised
-plis -> folds
-haussé -> raised
-plainte -> complaint
-d'aveugle -> of a blind person
-mener -> to lead
-",french
-41381813-066f-4976-ba25-6ca1527b2feb,French,General Notes,première partie II,"mécontent -> unhappy
-façon -> way
-m'empêche -> prevents me
-passe -> pass
-bouée -> buoy
-effleuré -> touched lightly
-vers -> towards
-hissé -> hoisted
-doré -> golden
-nuque -> nape
-battre -> to beat
-moitié -> half
-suivie -> followed
-taille -> size
-nagé -> swam
-brune -> brunette
-séchions -> we were drying
-rhabillés -> dressed again
-deuil -> mourning
-fautif -> at fault
-bête -> beast
-jambe -> leg
-traversin -> bolster
-cuire -> to cook
-chaises -> chairs
-paille -> straw
-dû -> owed
-jaunie -> yellowed
-cuivre -> copper
-découpé -> cut out
-cahier -> notebook
-mets -> dishes
-journaux -> newspapers
-faubourg -> suburb
-cependant -> however
-empêtres -> entangled
-genou -> knee
-culotte -> shorts
-nœud -> knot
-marron -> brown
-soie -> silk
-frêle -> frail
-canotier -> boater hat
-papillon -> butterfly
-voyant -> visible
-disait -> said
-laqués -> lacquered
-cintré -> fitted
-pochette -> pocket square
-brodée -> embroidered
-bouts -> ends
-carrés -> squares
-dépêchaient -> hurried
-ficus -> fig tree
-trottoir -> sidewalk
-tabac -> tobacco
-enfourchée -> straddled
-bondés -> crowded
-balayait -> swept
-sciure -> sawdust
-morceau -> piece
-orage -> storm
-pluie -> rain
-stade -> stadium
-banlieu -> suburb
-marchepieds -> footrests
-ramené -> brought back
-jouers -> cheeks
-hurlaient -> were screaming
-poumons -> lungs
-périrait -> would perish
-rougeâtre -> reddish
-revenaient -> were coming back
-aussitôt -> immediately
-parmi -> among
-paraisaient -> appeared
-songeurs -> thoughtful
-croiser -> to cross
-pâlir -> to pale
-étoiles -> stars
-mouillé -> wet
-sourire -> smile
-cheveux -> hair
-cou -> neck
-fraîchi -> freshened
-fermé -> closed
-tiré -> pulled
-",french
-d81e99ed-247f-4c81-9eca-0a971e755aee,French,General Notes,première partie V,"cabanon -> cabin
-raccrocher -> to hang up
-transmettre -> to transmit
-tout de suite -> right away
-parmi -> among
-lesquels -> which
-traiterait -> would treat
-permettrait -> would allow
-fond -> bottom
-mécontent -> unhappy
-désastreux -> disastrous
-réelle -> real
-doute -> doubt
-tue -> kills
-taisais -> was keeping silent
-souriant -> smiling
-dès -> from
-cours -> courses
-vécu -> lived
-c'est sale -> it’s dirty
-peau -> skin
-saccadés -> jerky
-débarassée -> rid
-fiévreusement -> feverishly
-jaquette -> jacket
-assise -> sitting
-empêtré -> entangled
-reprocher -> to blame
-remarquait -> noticed
-précipitée -> hasty
-carré -> square
-sac -> bag
-pourboire -> tip
-gousset -> watch pocket
-chemin -> path
-sûreté -> safety
-perdre -> to lose
-sur mes pas -> on my steps
-écrasé -> crushed
-celui-là -> that one
-accroupi -> crouched
-chaise -> chair
-mâchonnait -> was chewing
-sommeil -> sleep
-fer -> iron
-bec -> beak
-pommade -> ointment
-pauvre -> poor
-bâillé -> yawned
-remercié -> thanked
-gêné -> embarrassed
-l'asile -> asylum
-jugeât -> would judge
-puisque -> since
-furtif -> stealthy
-geste -> gesture
-écailles -> scales
-n'aboieront -> will not bark
 ",french
 e58b739f-025e-4df3-b605-d74e61866c78,French,General Notes,deuxième partie I,"arrestation -> arrest
 plusieurs -> several
@@ -7773,3 +6695,1000 @@ a8c27092-521f-48a2-8be0-1572bcc9dfb0,Portuguese,en,arrebentar,"Internal pressure
 fcac2cf4-67fb-4f52-83b9-c9569a495674,Portuguese,en,arrebentar,"Success/Excelling: In Brazilian Portuguese slang, it means to succeed brilliantly, ""kick ass,"" or ""kill it"". (e.g., ""o show vai arrebentar"" - the show is going to be amazing / a huge success).",portuguese
 ee48c1cb-a4c6-4ec3-9d06-085c280d67a8,Portuguese,en,arrebentar,"Overwhelming fatigue: To feel exhausted or overwhelmed. (e.g., ""estou arrebentado"" - I am completely exhausted / worn out).",portuguese
 b632a6de-0c86-4e26-adfa-53999509bc70,Portuguese,en,coxa,thigh,portuguese
+d218cb59-dd6f-539c-9ee5-4d0468b206fe,French,General Notes,2023-06-16 top-100-words (1/4),"# The 100 Most Common French Words (Les 100 Mots Les Plus Courants)
+
+| # | French | English |
+|---|--------|---------|
+| 1 | le | the |
+| 2 | de | of |
+| 3 | un | a/an |
+| 4 | être | to be |
+| 5 | et | and |
+| 6 | à | to/at/in |
+| 7 | il | he/it |
+| 8 | avoir | to have |
+| 9 | ne | not |
+| 10 | en | in/while |
+| 11 | se | oneself/each other |
+| 12 | qui | who/that |
+| 13 | dans | in/into/within |
+| 14 | ce | this/that |
+| 15 | que | that/which |
+| 16 | pas | not |
+| 17 | pour | for/to/in order to |
+| 18 | sur | on/upon/over |
+| 19 | par | by/through |
+| 20 | avec | with |
+| 21 | dire | to say/tell |
+| 22 | faire | to do/make |
+| 23 | plus | more |
+| 24 | pouvoir | to be able to/can |
+| 25 | aller | to go |
+",french
+fff1de87-2304-5217-94d0-5d88b262c5c1,French,General Notes,2023-06-16 top-100-words (2/4),"| # | French | English |
+|---|--------|---------|
+| 26 | voir | to see |
+| 27 | mettre | to put/lay/set |
+| 28 | au | to the |
+| 29 | jour | day |
+| 30 | comme | like/as |
+| 31 | prendre | to take |
+| 32 | temps | time/weather |
+| 33 | deux | two |
+| 34 | très | very |
+| 35 | savoir | to know (how) |
+| 36 | même | same/even |
+| 37 | sans | without |
+| 38 | ans | years |
+| 39 | travail | work |
+| 40 | vie | life |
+| 41 | nouveau | new |
+| 42 | après | after |
+| 43 | monde | world |
+| 44 | notre | our |
+| 45 | aussi | also/too |
+| 46 | donner | to give |
+| 47 | bien | well/good |
+| 48 | venir | to come |
+| 49 | sous | under/below |
+| 50 | premier | first |
+",french
+bb7cd691-fee8-5bf8-bbbf-9e812ec7df2a,French,General Notes,2023-06-16 top-100-words (3/4),"| # | French | English |
+|---|--------|---------|
+| 51 | grand | big/large |
+| 52 | année | year |
+| 53 | maintenant | now |
+| 54 | place | place/seat |
+| 55 | contre | against |
+| 56 | autre | other/another |
+| 57 | encore | again/still |
+| 58 | politique | political |
+| 59 | avant | before |
+| 60 | chose | thing |
+| 61 | comprendre | to understand |
+| 62 | partir | to leave |
+| 63 | revoir | to see again |
+| 64 | pendant | during/while |
+| 65 | suivre | to follow |
+| 66 | point | point/dot |
+| 67 | alors | then/so |
+| 68 | petit | small/little |
+| 69 | dernier | last |
+| 70 | mais | but |
+| 71 | arriver | to arrive |
+| 72 | jouer | to play |
+| 73 | état | state |
+| 74 | près | near/close |
+| 75 | jeune | young |
+",french
+37ed92bc-c489-59cc-94f7-45f534b49f09,French,General Notes,2023-06-16 top-100-words (4/4),"| # | French | English |
+|---|--------|---------|
+| 76 | regarder | to look/watch |
+| 77 | deuxième | second |
+| 78 | possible | possible |
+| 79 | famille | family |
+| 80 | entre | between/among |
+| 81 | suivant | following/next |
+| 82 | vrai | true |
+| 83 | jamais | never |
+| 84 | groupe | group |
+| 85 | plusieurs | several |
+",french
+3e79d081-ce3a-53c7-b66f-9a46551dcd50,French,General Notes,2023-06-16 verb-conjugations (1/3),"# Verb Conjugations (Conjugaisons)
+
+Practice conjugations of three regular French verbs across all major tenses.
+
+## ATTENDRE (to wait) -- 3rd group (-re)
+
+| Tense | je | tu | il/elle | nous | vous | ils/elles |
+|-------|----|----|---------|------|------|-----------|
+| Présent | j'attends | tu attends | il attend | nous attendons | vous attendez | ils attendent |
+| Imparfait | j'attendais | tu attendais | il attendait | nous attendions | vous attendiez | ils attendaient |
+| Futur | j'attendrai | tu attendras | elle attendra | nous attendrons | vous attendrez | ils attendront |
+| Conditionnel | j'attendrais | tu attendrais | elle attendrait | nous attendrions | vous attendriez | ils attendraient |
+| Passé composé | j'ai attendu | tu as attendu | il a attendu | nous avons attendu | vous avez attendu | ils ont attendu |
+| Subjonctif | que j'attende | que tu attendes | qu'il attende | que nous attendions | que vous attendiez | qu'elles attendent |
+
+**Impératif:** attends, attendons, attendez
+**Participe présent:** attendant
+**Participe passé:** attendu
+
+---
+
+",french
+b2d2d4fc-93fc-5f9f-b626-54e38ad4d52a,French,General Notes,2023-06-16 verb-conjugations (2/3),"## FINIR (to finish) -- 2nd group (-ir)
+
+| Tense | je | tu | il/elle | nous | vous | ils/elles |
+|-------|----|----|---------|------|------|-----------|
+| Présent | je finis | tu finis | il finit | nous finissons | vous finissez | ils finissent |
+| Imparfait | je finissais | tu finissais | il finissait | nous finissions | vous finissiez | ils finissaient |
+| Futur | je finirai | tu finiras | elle finira | nous finirons | vous finirez | ils finiront |
+| Conditionnel | je finirais | tu finirais | elle finirait | nous finirions | vous finiriez | ils finiraient |
+| Passé composé | j'ai fini | tu as fini | il a fini | nous avons fini | vous avez fini | ils ont fini |
+| Subjonctif | que je finisse | que tu finisses | qu'il finisse | que nous finissions | que vous finissiez | qu'elles finissent |
+
+**Impératif:** finis, finissons, finissez
+**Participe présent:** finissant
+**Participe passé:** fini
+
+---
+
+",french
+3c57fa6d-344e-5952-a93a-b1e6f67c8c83,French,General Notes,2023-06-16 verb-conjugations (3/3),"## PARLER (to speak) -- 1st group (-er)
+
+| Tense | je | tu | il/elle | nous | vous | ils/elles |
+|-------|----|----|---------|------|------|-----------|
+| Présent | je parle | tu parles | il parle | nous parlons | vous parlez | ils parlent |
+| Imparfait | je parlais | tu parlais | il parlait | nous parlions | vous parliez | ils parlaient |
+| Futur | je parlerai | tu parleras | elle parlera | nous parlerons | vous parlerez | ils parleront |
+| Conditionnel | je parlerais | tu parlerais | elle parlerait | nous parlerions | vous parleriez | ils parleraient |
+| Passé composé | j'ai parlé | tu as parlé | il a parlé | nous avons parlé | vous avez parlé | ils ont parlé |
+| Subjonctif | que je parle | que tu parles | qu'il parle | que nous parlions | que vous parliez | qu'ils parlent |
+
+**Impératif:** parle, parlons, parlez
+**Participe présent:** parlant
+**Participe passé:** parlé
+",french
+aca6a579-2a29-5bb6-95bd-474650219370,French,General Notes,première partie III (1/3),"tromper -> to deceive
+connaissements -> bills of lading
+s'amoncelaient -> were piling up
+brûlant -> burning
+chaînes -> chains
+noyé -> drowned
+poussière -> dust
+mâts -> masts
+élan -> momentum
+treuils -> winches
+longions -> we were following
+pavés -> cobblestones
+inégaux -> uneven
+haleine -> breath
+quais -> docks
+heurté -> hit
+palier -> landing
+l'épagneul -> the spaniel
+poils -> hairs
+rougeâtres -> reddish
+mène -> leads
+bute -> hits
+bat -> beats
+rampe -> railing
+frayeur -> fright
+terreur -> terror
+haine -> hatred
+par hasard -> by chance
+d'ailleurs -> besides
+gémissait -> was groaning
+devinais -> guessed
+penché -> leaned
+bête -> beast
+métier -> trade
+pourtant -> however
+guère -> hardly
+dégoûtait -> disgusted
+boudin -> pudding
+ceau -> basin
+m'éviterait -> would avoid me
+ange -> angel
+stuc -> stucco
+défait -> undone
+sale -> dirty
+pansement -> dressing
+douteux -> doubtful
+cherchait -> was looking for
+bagarre -> fight
+méchant -> mean
+ça vaut mieux -> it's better that way
+",french
+79269d79-81e1-5e3a-955c-6602f8214adc,French,General Notes,première partie III (2/3),"tombé -> fell
+relever -> to pick up
+coup de genou -> knee hit
+taquets -> cleats
+compte -> account
+pansement -> dressing
+égal -> equal
+poêle -> stove
+mangeant -> eating
+installés -> settled
+autant -> as much
+entretenue -> maintained
+tromperie -> deceit
+mois-ci -> this month
+loyer -> rent
+modde-piéte -> doormat
+tapée -> batch
+bonheur -> happiness
+jusqu'au -> until
+auparavant -> before
+volets -> shutters
+punie -> punished
+charbonnait -> was charring
+restait -> remained
+emportaient -> were carrying away
+lointains -> distant
+coït -> coitus
+l'emmener -> to take him/her
+mœurs -> morals
+réfléchir -> to reflect
+punir -> to punish
+découvert -> discovered
+cracherait -> would spit
+mettrait -> would put
+dehors -> outside
+rédiger -> to write
+assiettes -> plates
+soigneusement -> carefully
+toile -> canvas
+tiroir -> drawer
+feuille -> sheet
+quadrillé -> squared
+encrier -> inkwell
+carré -> square
+d'encre -> ink
+hochant -> nodding
+tutoyait -> was addressing informally
+frappé -> struck
+cacheté -> sealed
+glissement -> sliding
+",french
+7bddd508-554a-5a5a-9ef7-e6bea4f0a986,French,General Notes,première partie III (3/3),"sommeil -> sleep
+palier -> landing
+cage -> cage
+d'escalier -> of stairs
+bourdonnait -> was buzzing
+souffle -> breath
+gémissait -> was groaning
+",french
+36ce9e6e-7637-556d-aaf4-47ac2a873a2d,French,General Notes,deuxième partie IV (1/2),"plaidoiries -> pleadings
+gênait -> bothered
+démontrer -> demonstrate
+preuve -> proof
+l'éclairage -> lighting
+fournira -> will provide
+âme -> soul
+événements -> events
+manquait -> was missing
+besogne -> task
+moi j'écoutais -> I was listening
+seule -> alone
+ému -> moved
+m'accabler -> overwhelm me
+mais tant d'acharnement m'étonnait -> but such perseverance surprised me
+muer -> to change
+saurions -> would know
+gouffre -> abyss
+selon -> according to
+osait -> dared
+faiblesse -> weakness
+cédait -> yielded
+craignait -> feared
+ressentait -> felt
+tuait -> killed
+meurtrière -> murderer
+son devoir -> his duty
+léger -> light
+ressens -> feel
+mêlant -> mixing
+donné -> given
+penché -> leaned
+plaidé -> pleaded
+honnête -> honest
+soutenu -> supported
+m'étonne -> surprises me
+mené -> led
+je me souviens -> I remember
+assailli -> assaulted
+m'appartenait -> belonged to me
+gorge -> throat
+traînais -> dragged
+châtiments -> punishments
+douceur -> sweetness
+souriait -> smiled
+meurtre -> murder
+cassation -> appeal
+éloignés -> distant
+pourvoi -> appeal
+tranchée -> trench
+",french
+81901c16-cf8c-509d-ae45-4e4f5e146560,French,General Notes,deuxième partie IV (2/2),"lisais -> was reading
+emmené -> taken
+recevoir -> receive",french
+4d44a9b4-9431-5fff-9bfb-c55b1fadf155,French,General Notes,première partie VI (1/3),"secoue -> shakes
+amer -> bitter
+toile -> canvas
+lâché -> let go
+témoigné -> testified
+se dépêcher -> to hurry
+pierres -> stones
+jaunâtres -> yellowish
+asphodèles -> asphodels
+cirée -> waxed
+éparpiller -> scatter
+enfouies -> buried
+cap -> cape
+chalutier -> trawler
+cueilli -> picked
+pilotis -> stilts
+friture -> frying
+jolie -> pretty
+épatante -> amazing
+éprouver -> to feel
+tic -> tic
+plongé -> plunged
+jeté -> thrown
+nageait -> was swimming
+écartait -> was moving aside
+coulaient -> were flowing
+voiles -> sails
+paraissait -> appeared
+battant -> flapping
+plat -> flat
+visqueuse -> viscous
+chaleurs -> heats
+secoué -> shaken
+déjeuner -> lunch
+étaler -> spread
+déjà -> already
+plaisais -> pleased
+étonnés -> surprised
+vaisselle -> dishes
+surplombaient -> overhung
+chaleur -> heat
+vécu -> lived
+moitié -> half
+nue -> naked
+bagarre -> fight
+surchauffé -> overheated
+ralenti -> slowed
+bulles -> bubbles
+couteau -> knife
+tailladée -> slashed
+",french
+6a7603fa-e53e-5a3a-996a-0df19485c0be,French,General Notes,première partie VI (2/3),"osé -> dared
+bouger -> to move
+tenir -> to hold
+enfuis -> fled
+cloués -> nailed
+serré -> tight
+dégouttant -> dripping
+soutenu -> sustained
+roseau -> reed
+écrasant -> crushing
+brisait -> was breaking
+source -> source
+graisseux -> greasy
+l'œil -> the eye
+glissé -> slipped
+bois -> wood
+retentissante -> resounding
+pénible -> painful
+haletait -> was panting
+gonfler -> to swell
+poings -> fists
+ivresse -> drunkenness
+coquillage -> seashell
+jaillie -> sprang
+crispaient -> were tensing
+aveuglant -> blinding
+fuir -> to flee
+eau -> water
+dos -> back
+soulevé -> lifted
+veston -> jacket
+paupières -> eyelids
+n'avançait -> did not advance
+l'ancre -> the anchor
+tache -> stain
+j'en ai deviné -> I guessed
+demi-tour -> U-turn
+brûlure -> burn
+joues -> cheeks
+j'ai fait un pas, un seul pas en avant -> I took a step, just one step forward
+l'acier -> steel
+giclé -> spurted
+étincelante -> sparkling
+tiède -> lukewarm
+épais -> thick
+cymbales -> cymbals
+glaive -> sword
+jailli -> sprang
+rongeait -> was gnawing
+cils -> eyelashes
+",french
+b627dc2a-71f2-5bee-9633-e58f09a561dd,French,General Notes,première partie VI (3/3),"charrié -> carried
+pleuvoir -> to rain
+gâchette -> trigger
+ventre -> belly
+crosse -> handle
+assourdissant -> deafening
+balles -> bullets
+brefs -> brief
+parût -> appeared
+malheur -> misfortune
+",french
+047de4c5-dbbc-5e1f-8cf4-1fe003ad3991,French,General Notes,deuxième partie V (1/2),"
+l'aumônier -> the chaplain
+allongé -> lying
+je ne vois que lui -> I only see him
+eussent échappé -> had escaped
+saut -> jump
+l'espoir -> hope
+imperturbable -> unflappable
+je ne l'avais pas connu -> I had not known him
+j'écrasais -> I crushed
+empoisonée -> poisoned
+recroquevillais -> curled up
+couperet -> guillotine
+lequel -> which one
+souhaitât -> would wish
+marchât -> would walk
+accroc -> snag
+machine -> machine
+fusse -> were
+aspect -> appearance
+l'échafaud -> the scaffold
+honte -> shame
+tandis -> while
+l'aube -> dawn
+pourvoi -> appeal
+m'efforçais -> I tried
+je finissais par me dire que... -> I ended up telling myself that...
+contraindre -> to constrain
+l'aube -> dawn
+naisse -> be born
+vitre -> glass
+guettais -> was watching
+rauque -> hoarse
+tout le monde sait que la vie ne vaut pas la peine d'être vécue -> everyone knows that life is not worth living
+dans le fond -> deep down
+bond -> leap
+frottées -> rubbed
+adossé -> leaning
+musclée -> muscular
+cuisses -> thighs
+réellement -> really
+agacement -> irritation
+étroite -> narrow
+remuer -> to move
+s'il n'osait avancer -> if he dared not move forward
+avais-je cherché un visage -> had I sought a face
+fût -> was
+valait -> was worth
+l'aumônier -> the chaplain
+menaçaient -> threatened
+",french
+a078a7a1-407d-58ab-90d0-8afd449717c0,French,General Notes,deuxième partie V (2/2),"épuisé -> exhausted
+tempes -> temples
+d'étoiles -> of stars
+tendre -> tender
+restait -> remained
+souhaiter -> to wish
+m'accueillent -> welcome me
+cris -> cries
+haine -> hatred
+",french
+8ce21c33-a1fa-5905-af58-026dec7a66d2,French,General Notes,première partie I (1/5),"vieillards -> old men
+ainsi -> thus
+veiller -> to watch over
+congé -> leave
+pareille -> similar
+en somme -> in short
+doute -> doubt
+deuil -> mourning
+revêtu -> dressed
+de peine -> of sorrow
+étourdi -> dizzy
+cravate -> tie
+emprunter -> borrow
+brassard -> armband
+couru -> run
+manquer -> miss
+pendant -> during
+presque -> almost
+tassé -> crammed
+chemin -> path
+serré -> tight
+trop -> too
+seul -> alone
+soutien -> support
+reprochait -> reproached
+subvenir -> to meet
+besoins -> needs
+ajouté -> added
+loin -> far
+partager -> share
+eux -> them
+pleurait -> cried
+au bout -> at the end
+dernière -> last
+prenait -> took
+l'écoutais -> listened to him/her
+meurt -> dies
+reprenaient -> resumed
+jacassement -> chatter
+assourdi -> muffled
+perruches -> parakeets
+disparue -> disappeared
+paraît-il -> apparently
+exprimé -> expressed
+remercié -> thanked
+athée -> atheist
+blanchie -> whitened
+chaux -> lime
+recouverte -> covered
+couvercle -> lid
+",french
+3158a689-cd18-5db2-9015-8be7ba122f14,French,General Notes,première partie I (2/5),"brou -> pulp
+noix -> nut
+bégayé -> stuttered
+dévisser -> to unscrew
+n'aurais -> would not have
+s'approchait -> approached
+tortillant -> twisting
+arrière -> back
+sortie -> exit
+le tour de la tête -> around the head
+bandeau -> headband
+gênait -> bothered
+l'aurait -> would have
+je me suis souvenu -> I remembered
+surtout -> especially
+courir -> to run
+corbillard -> hearse
+tais-toi -> shut up
+raconter -> to tell
+rougi -> reddened
+indigent -> needy
+garde -> guard
+tombé -> fallen
+épaissie -> thickened
+au-dessus -> above
+aveuglé -> blinded
+l'éclaboussement -> splashing
+soudain -> sudden
+aucune -> none
+chaises -> chairs
+empilé -> piled
+autour -> around
+tasses -> cups
+tricotait -> was knitting
+réchauffé -> reheated
+somnolé -> dozed
+frôlement -> brushing
+éclatante -> dazzling
+courbes -> curves
+dessinaient -> drew
+pureté -> purity
+blessante -> hurtful
+dizaine -> dozen
+glissaient -> slipped
+aveuglante -> blinding
+grinçât -> creak
+m'échappait -> escaped me
+ressortir -> to go out again
+lueur -> glow
+hoché -> nodded
+",french
+2f826a12-54b6-5cf0-82fb-6e2d00e6c533,French,General Notes,première partie I (3/5),"s'agissait -> it was about
+saluaient -> greeted
+aperçu -> glimpsed
+dodeliner -> to nod
+compagnes -> companions
+affaissés -> slumped
+pleurait -> cried
+bredouillé -> stammered
+liée -> linked
+faisaient -> made
+pénible -> painful
+singulier -> singular
+apercevaient -> perceived
+agrippés -> gripping
+canne -> cane
+crachait -> spat
+mouchoir -> handkerchief
+carreaux -> tiles
+en sortant -> going out
+se promener -> to walk
+auparavant -> before
+rayé -> scratched
+l'espèce -> kind
+suivre -> follow
+vieil -> old
+interdit -> prohibited
+bâtiment -> building
+chœur -> choir
+baissait -> lowered
+coup -> blow
+enfoncées -> embedded
+prêtre -> priest
+prières -> prayers
+bière -> beer/coffin
+drap -> sheet
+suivants -> following
+déléguée -> delegated
+nous avons suivi -> we followed
+feutre -> felt
+calotte -> skullcap
+ronde -> round
+ôté -> removed
+nœud -> knot
+d'étoffe -> fabric
+lèvres -> lips
+ballantes -> dangling
+ourlées -> hemmed
+curé -> parish priest
+fermant -> closing
+chaleur -> heat
+",french
+65267466-cb8c-554b-a37c-2e23d2b33e0b,French,General Notes,première partie I (4/5),"collines -> hills
+menaient -> led
+pays -> country
+devait -> had to
+trêve -> truce
+tressaillir -> to shudder
+nous nous sommes mis en marche -> we started walking
+claudiquait -> limped
+prenait -> took
+vieillard -> old man
+laquelle -> which
+bourdonnait -> buzzed
+crépitements -> crackling
+mouchoir -> handkerchief
+s'essuyait -> was wiping
+crâne -> skull
+montrant -> showing
+tape -> tap
+chiffre -> number
+feutre -> felt
+hâtait -> hurried
+l'éclat -> brightness
+goudron -> tar
+enfonçaient -> sank
+pulpe -> pulp
+cuir -> leather
+bouilli -> boiled
+gluant -> sticky
+terne -> dull
+pétri -> kneaded
+laqué -> lacquered
+crottin -> dung
+vernis -> varnish
+l'encens -> incense
+nuée -> cloud
+chaleur -> heat
+pris -> took
+coupait -> cut
+rattraper -> to catch up
+tournant -> turning
+insolation -> sunstroke
+larmes -> tears
+ruisselaient -> streamed
+rides -> wrinkles
+s'étalaient -> spread
+se rejoignaient -> joined
+détruit -> destroyed
+pantin -> puppet
+racines -> roots
+mêlaient -> mixed
+",french
+b71d649b-9278-5b2f-8215-d91c9429d7d2,French,General Notes,première partie I (5/5),"nid -> nest
+",french
+a235e2a0-e098-5d5a-9fcc-8f40e2972b5f,French,General Notes,première partie IV (1/2),"raies -> stripes
+resserrée -> tightened
+roseaux -> reeds
+rochers -> rocks
+tiède -> lukewarm
+paresseuses -> lazy
+jouersnageant -> cheeks swimming
+crête -> crest
+dentelle -> lace
+l'écume -> foam
+disparaissait -> disappeared
+mousseuse -> foamy
+retombait -> fell back
+tiede -> lukewarm
+l'amertume -> bitterness
+lèvres -> lips
+rafraîchissait -> refreshed
+jeter -> to throw
+couler -> to flow
+déjeunerions -> would have lunch
+griffes -> claws
+semelles -> soles
+charogne -> carrion
+manches -> sleeves
+éclaté -> burst
+manquer -> to miss
+aiguë -> sharp
+hurlé -> screamed
+empli -> filled
+plombier -> plumber
+locataire -> tenant
+pleuré -> cried
+ouvert -> open
+doucereux -> sweetish
+giflé -> slapped
+volée -> flight
+claque -> slap
+ramasser -> to pick up
+mégot -> cigarette butt
+guignol -> puppet
+maquereau -> pimp
+fermer -> to close
+gueule -> mouth
+soûl -> drunk
+honte -> shame
+trembler -> to tremble
+avis -> opinion
+témoin -> witness
+bordel -> mess
+fine -> fine
+",french
+c4264e82-7b95-5d0c-bc97-d99838e66aa8,French,General Notes,première partie IV (2/2),"marmonnait -> was mumbling
+fouiller -> to search
+emmené -> taken
+volubilité -> volubility
+baraque -> shack
+foraines -> fairs
+collier -> necklace
+s'égarer -> to get lost
+malgré -> despite
+recueillait -> collected
+croûtes -> scabs
+fourrière -> pound
+crever -> to burst
+souliers -> shoes
+craqué -> cracked
+cloison -> partition
+lendemain -> next day
+",french
+96468050-bf08-56b8-a44f-d898471bc409,French,General Notes,deuxième partie III (1/2),"surviendrait -> would occur
+demie -> half
+darmes -> weapons
+remueménage -> hustle and bustle
+menottes -> handcuffs
+jurés -> jurors
+épaient -> spied
+niaise -> naive
+puisque -> since
+belette -> weasel
+engraisée -> fattened
+narquois -> mocking
+bleue -> blue
+témoins -> witnesses
+sein -> breast
+disparaître -> disappear
+moindre -> slightest
+voyais -> saw
+paille -> straw
+tressée -> braided
+aussitôt -> immediately
+agacement -> annoyance
+toussé -> coughed
+feuilleté -> leafed through
+s'éventant -> fanning oneself
+touchaient -> touched
+de fort près -> very close
+soigner -> take care of
+coûté -> cost
+conciliabules -> whisperings
+chaleur -> heat
+munis -> equipped
+plaignait -> complained
+manie -> habit
+plaindre -> pity
+c'est la loi -> it's the law
+un tel éclat -> such a burst
+j'ai senti combien j'etais détesté -> I felt how much I was hated
+posait -> posed
+coupable -> guilty
+d'étonnement -> of amazement
+bruyamment -> noisily
+apprécieront -> will appreciate
+concluront -> will conclude
+soutenir -> support
+m'empêchait -> prevented me
+évanoui -> fainted
+fâché -> angry
+péremptoire -> peremptory
+piquait -> stung
+",french
+98516a34-2469-5b5b-abcc-f60fdeeb831a,French,General Notes,deuxième partie III (2/2),"jetait -> threw
+roulait -> rolled
+panama -> Panama hat
+mettre -> put
+col -> collar
+renfermé prétoire -> courtroom
+coudes -> elbows
+genoux -> knees
+émue -> moved
+sanglots -> sobs
+poursuivie -> pursued
+forçait -> forced
+paraissait -> seemed
+emmené -> taken
+haïr -> to hate
+méfaits -> misdeeds
+giflé -> slapped
+crapuleux -> scoundrel
+débauche -> debauchery
+honteuse -> shameful
+amidonée -> starched
+souteneur -> pimp
+exerçait -> exercised
+plis -> folds
+haussé -> raised
+plainte -> complaint
+d'aveugle -> of a blind person
+mener -> to lead
+",french
+a2c1da52-4b8d-531c-9342-22f045a599ad,French,General Notes,première partie II (1/2),"mécontent -> unhappy
+façon -> way
+m'empêche -> prevents me
+passe -> pass
+bouée -> buoy
+effleuré -> touched lightly
+vers -> towards
+hissé -> hoisted
+doré -> golden
+nuque -> nape
+battre -> to beat
+moitié -> half
+suivie -> followed
+taille -> size
+nagé -> swam
+brune -> brunette
+séchions -> we were drying
+rhabillés -> dressed again
+deuil -> mourning
+fautif -> at fault
+bête -> beast
+jambe -> leg
+traversin -> bolster
+cuire -> to cook
+chaises -> chairs
+paille -> straw
+dû -> owed
+jaunie -> yellowed
+cuivre -> copper
+découpé -> cut out
+cahier -> notebook
+mets -> dishes
+journaux -> newspapers
+faubourg -> suburb
+cependant -> however
+empêtres -> entangled
+genou -> knee
+culotte -> shorts
+nœud -> knot
+marron -> brown
+soie -> silk
+frêle -> frail
+canotier -> boater hat
+papillon -> butterfly
+voyant -> visible
+disait -> said
+laqués -> lacquered
+cintré -> fitted
+pochette -> pocket square
+brodée -> embroidered
+",french
+6cac6ce2-527b-5c1d-973b-f4687bec305f,French,General Notes,première partie II (2/2),"bouts -> ends
+carrés -> squares
+dépêchaient -> hurried
+ficus -> fig tree
+trottoir -> sidewalk
+tabac -> tobacco
+enfourchée -> straddled
+bondés -> crowded
+balayait -> swept
+sciure -> sawdust
+morceau -> piece
+orage -> storm
+pluie -> rain
+stade -> stadium
+banlieu -> suburb
+marchepieds -> footrests
+ramené -> brought back
+jouers -> cheeks
+hurlaient -> were screaming
+poumons -> lungs
+périrait -> would perish
+rougeâtre -> reddish
+revenaient -> were coming back
+aussitôt -> immediately
+parmi -> among
+paraisaient -> appeared
+songeurs -> thoughtful
+croiser -> to cross
+pâlir -> to pale
+étoiles -> stars
+mouillé -> wet
+sourire -> smile
+cheveux -> hair
+cou -> neck
+fraîchi -> freshened
+fermé -> closed
+tiré -> pulled
+",french
+b3106e34-ee6b-5276-8b43-75898bd47793,French,General Notes,première partie V (1/2),"cabanon -> cabin
+raccrocher -> to hang up
+transmettre -> to transmit
+tout de suite -> right away
+parmi -> among
+lesquels -> which
+traiterait -> would treat
+permettrait -> would allow
+fond -> bottom
+mécontent -> unhappy
+désastreux -> disastrous
+réelle -> real
+doute -> doubt
+tue -> kills
+taisais -> was keeping silent
+souriant -> smiling
+dès -> from
+cours -> courses
+vécu -> lived
+c'est sale -> it’s dirty
+peau -> skin
+saccadés -> jerky
+débarassée -> rid
+fiévreusement -> feverishly
+jaquette -> jacket
+assise -> sitting
+empêtré -> entangled
+reprocher -> to blame
+remarquait -> noticed
+précipitée -> hasty
+carré -> square
+sac -> bag
+pourboire -> tip
+gousset -> watch pocket
+chemin -> path
+sûreté -> safety
+perdre -> to lose
+sur mes pas -> on my steps
+écrasé -> crushed
+celui-là -> that one
+accroupi -> crouched
+chaise -> chair
+mâchonnait -> was chewing
+sommeil -> sleep
+fer -> iron
+bec -> beak
+pommade -> ointment
+pauvre -> poor
+bâillé -> yawned
+remercié -> thanked
+",french
+15f67125-bad3-5639-bd93-36e4daee6f17,French,General Notes,première partie V (2/2),"gêné -> embarrassed
+l'asile -> asylum
+jugeât -> would judge
+puisque -> since
+furtif -> stealthy
+geste -> gesture
+écailles -> scales
+n'aboieront -> will not bark
+",french
+823854ab-a988-4a2c-a845-8f37be8c7309,Portuguese,en,convite_teste_fixture_ad9b6ff47169456aa2e430907ac8262a,invitation fixture ad9b6ff47169456aa2e430907ac8262a,portuguese

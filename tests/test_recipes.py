@@ -8,6 +8,7 @@ import io
 import json
 import shutil
 import subprocess
+import uuid
 from importlib.machinery import SourceFileLoader
 from pathlib import Path
 
@@ -48,11 +49,33 @@ def run_brainbrew(recipe: str, workdir: Path) -> None:
     assert result.returncode == 0, result.stderr or result.stdout
 
 
+def run_build_anki(workdir: Path) -> None:
+    result = subprocess.run(
+        ["python3", str(workdir / "scripts" / "build_anki.py")],
+        cwd=workdir,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr or result.stdout
+
+
+def read_csv_rows(csv_file: Path) -> list[list[str]]:
+    with csv_file.open(newline="", encoding="utf-8") as handle:
+        return list(csv.reader(handle))
+
+
+def count_matching_rows(csv_file: Path, expected_tail: list[str]) -> int:
+    return sum(1 for row in read_csv_rows(csv_file)[1:] if row[1:] == expected_tail)
+
+
 def make_recipe_workspace(tmp_path: Path) -> Path:
     workspace = tmp_path / "all_lang_notes"
     workspace.mkdir()
     copy_tree(ALL_LANG_ROOT / "recipes", workspace / "recipes")
     copy_tree(ALL_LANG_ROOT / "src", workspace / "src")
+    copy_tree(ALL_LANG_ROOT / "scripts", workspace / "scripts")
+    copy_tree(ALL_LANG_ROOT / "config", workspace / "config")
     return workspace
 
 
@@ -68,6 +91,17 @@ def test_source_to_anki_recipe_builds_crowdanki_export(tmp_path: Path) -> None:
     assert deck["name"] == "All Language Notes"
     assert deck["note_models"][0]["name"] == "LanguageModel"
     assert len(deck["notes"]) > 0
+
+    split_note_fronts = [note["fields"][2] for note in deck["notes"]]
+    assert "2023-06-16 top-100-albums" not in split_note_fronts
+    assert "2023-06-16 top-100-words (1/4)" in split_note_fronts
+    assert "2023-06-16 top-100-words (4/4)" in split_note_fronts
+    assert "2023-06-16 verb-conjugations (1/3)" in split_note_fronts
+    assert "2023-06-16 verb-conjugations (3/3)" in split_note_fronts
+    assert "première partie III (1/3)" in split_note_fronts
+    assert "première partie III (3/3)" in split_note_fronts
+    assert "deuxième partie IV (1/2)" in split_note_fronts
+    assert "deuxième partie IV (2/2)" in split_note_fronts
 
 
 def test_anki_to_source_recipe_restores_language_notes_csv(tmp_path: Path) -> None:
@@ -88,6 +122,91 @@ def test_anki_to_source_recipe_restores_language_notes_csv(tmp_path: Path) -> No
     restored_text = restored_csv.read_text(encoding="utf-8")
     assert len(restored_text.splitlines()) > 0
     assert restored_text != original_csv
+
+
+def test_source_to_anki_applies_configured_ignore_and_split_rules(tmp_path: Path) -> None:
+    workspace = make_recipe_workspace(tmp_path)
+
+    run_brainbrew("recipes/source_to_anki.yaml", workspace)
+
+    deck_json = workspace / "build" / "all_lang_notes_anki" / "deck.json"
+    deck = json.loads(deck_json.read_text(encoding="utf-8"))
+
+    notes_by_front = {note["fields"][2]: note for note in deck["notes"]}
+
+    assert "2023-06-16 top-100-albums" not in notes_by_front
+    assert "2023-06-16 top-100-words (1/4)" in notes_by_front
+    assert "2023-06-16 top-100-words (4/4)" in notes_by_front
+    assert "2023-06-16 verb-conjugations (1/3)" in notes_by_front
+    assert "2023-06-16 verb-conjugations (3/3)" in notes_by_front
+
+    table_chunks = [
+        notes_by_front[f"2023-06-16 top-100-words ({index}/4)"]["fields"][3]
+        for index in range(1, 5)
+    ]
+    assert "| 1 | le | the |" in table_chunks[0]
+    assert "| 25 | aller | to go |" in table_chunks[0]
+    assert "| 26 | voir | to see |" in table_chunks[1]
+    assert "| 50 | premier | first |" in table_chunks[1]
+    assert "| 51 | grand | big/large |" in table_chunks[2]
+    assert "| 75 | jeune | young |" in table_chunks[2]
+    assert "| 76 | regarder | to look/watch |" in table_chunks[3]
+    assert "| 85 | plusieurs | several |" in table_chunks[3]
+
+    section_chunks = [
+        notes_by_front[f"2023-06-16 verb-conjugations ({index}/3)"]["fields"][3]
+        for index in range(1, 4)
+    ]
+    assert "## ATTENDRE (to wait) -- 3rd group (-re)" in section_chunks[0]
+    assert "## FINIR (to finish) -- 2nd group (-ir)" in section_chunks[1]
+    assert "## PARLER (to speak) -- 1st group (-er)" in section_chunks[2]
+
+    prose_chunks = [
+        notes_by_front[f"première partie III ({index}/3)"]["fields"][3]
+        for index in range(1, 4)
+    ]
+    assert prose_chunks[0].startswith("tromper -> to deceive\n")
+    assert prose_chunks[0].endswith("ça vaut mieux -> it's better that way\n")
+    assert prose_chunks[1].startswith("tombé -> fell\n")
+    assert "modde-piéte -> doormat\n" in prose_chunks[1]
+    assert prose_chunks[2].endswith("gémissait -> was groaning\n")
+
+
+def test_build_anki_wrapper_normalizes_before_export(tmp_path: Path) -> None:
+    workspace = make_recipe_workspace(tmp_path)
+
+    active_csv = workspace / "src" / "data" / "LanguageNotes.csv"
+    ignored_csv = workspace / "src" / "data" / "LanguageNotesIgnored.csv"
+
+    with active_csv.open(encoding="utf-8", newline="") as handle:
+        active_rows = list(csv.DictReader(handle))
+    with ignored_csv.open(encoding="utf-8", newline="") as handle:
+        ignored_rows = list(csv.DictReader(handle))
+
+    album_row = next(row for row in ignored_rows if row["Front"] == "2023-06-16 top-100-albums")
+    ignored_rows = [row for row in ignored_rows if row["Front"] != "2023-06-16 top-100-albums"]
+    active_rows.insert(0, album_row)
+
+    with active_csv.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["guid", "Language", "Topic", "Front", "Back", "tags"], lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(active_rows)
+
+    with ignored_csv.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["guid", "Language", "Topic", "Front", "Back", "tags"], lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(ignored_rows)
+
+    run_build_anki(workspace)
+
+    deck_json = workspace / "build" / "all_lang_notes_anki" / "deck.json"
+    deck = json.loads(deck_json.read_text(encoding="utf-8"))
+    fronts = [note["fields"][2] for note in deck["notes"]]
+    assert "2023-06-16 top-100-albums" not in fronts
+
+    with ignored_csv.open(encoding="utf-8", newline="") as handle:
+        normalized_ignored_rows = list(csv.DictReader(handle))
+    assert any(row["Front"] == "2023-06-16 top-100-albums" for row in normalized_ignored_rows)
 
 
 def test_append_csv_splits_back_on_newlines(tmp_path: Path) -> None:
@@ -257,7 +376,11 @@ def test_add_note_only_requires_target_repo(tmp_path: Path) -> None:
         jj.brainbrew_command = lambda: "brainbrew"
         jj.rebuild = lambda all_lang_root, brainbrew: 0
 
-        result = jj.add_note("pt", "en", "convite_teste_unico", "invitation unique")
+        unique_suffix = uuid.uuid4().hex
+        front = f"convite_teste_fixture_{unique_suffix}"
+        back = f"invitation fixture {unique_suffix}"
+
+        result = jj.add_note("pt", "en", front, back)
 
         assert result == 0
         date_stamp = datetime.now().astimezone().date().isoformat()
@@ -278,7 +401,7 @@ def test_jj_command_splits_multiline_back_into_multiple_cards(tmp_path: Path) ->
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
-    before_count = sum(1 for _ in csv_file.open(encoding="utf-8"))
+    before_count = len(read_csv_rows(csv_file))
 
     result = subprocess.run(
         [
@@ -296,11 +419,11 @@ def test_jj_command_splits_multiline_back_into_multiple_cards(tmp_path: Path) ->
 
     assert result.returncode == 0, result.stderr or result.stdout
 
-    after_lines = csv_file.read_text(encoding="utf-8").splitlines()
-    assert len(after_lines) == before_count + 3
-    assert after_lines[-3].endswith(",Portuguese,es,lascado,Loucas: chipped,portuguese")
-    assert after_lines[-2].endswith(",Portuguese,es,lascado,Madeira: splintered,portuguese")
-    assert after_lines[-1].endswith(",Portuguese,es,lascado,Riscos: nicked,portuguese")
+    after_rows = read_csv_rows(csv_file)
+    assert len(after_rows) == before_count + 3
+    assert count_matching_rows(csv_file, ["Portuguese", "es", "lascado", "Loucas: chipped", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "es", "lascado", "Madeira: splintered", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "es", "lascado", "Riscos: nicked", "portuguese"]) == 1
 
 
 def test_jj_command_defaults_target_language_to_en(tmp_path: Path) -> None:
@@ -328,9 +451,7 @@ def test_jj_command_defaults_target_language_to_en(tmp_path: Path) -> None:
     )
 
     assert result.returncode == 0, result.stderr or result.stdout
-    assert csv_file.read_text(encoding="utf-8").splitlines()[-1].endswith(
-        ",Portuguese,en,convitezinho_unico,tiny invitation,portuguese"
-    )
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "convitezinho_unico", "tiny invitation", "portuguese"]) == 1
 
 
 def test_jj_command_accepts_google_translate_blob(tmp_path: Path) -> None:
@@ -356,9 +477,7 @@ def test_jj_command_accepts_google_translate_blob(tmp_path: Path) -> None:
     )
 
     assert result.returncode == 0, result.stderr or result.stdout
-    assert csv_file.read_text(encoding="utf-8").splitlines()[-1].endswith(
-        ",Portuguese,en,alheia_unica,alien unique,portuguese"
-    )
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "alheia_unica", "alien unique", "portuguese"]) == 1
 
 
 def test_jj_command_accepts_polysemous_google_translate_blob(tmp_path: Path) -> None:
@@ -371,7 +490,7 @@ def test_jj_command_accepts_polysemous_google_translate_blob(tmp_path: Path) -> 
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
-    before_count = sum(1 for _ in csv_file.open(encoding="utf-8"))
+    before_count = len(read_csv_rows(csv_file))
 
     result = subprocess.run(
         [
@@ -405,15 +524,15 @@ def test_jj_command_accepts_polysemous_google_translate_blob(tmp_path: Path) -> 
 
     assert result.returncode == 0, result.stderr or result.stdout
 
-    after_lines = csv_file.read_text(encoding="utf-8").splitlines()
-    assert len(after_lines) == before_count + 7
-    assert after_lines[-7].endswith(",Portuguese,en,aquecimento_unico,heating,portuguese")
-    assert after_lines[-6].endswith(",Portuguese,en,aquecimento_unico,warming,portuguese")
-    assert after_lines[-5].endswith(",Portuguese,en,aquecimento_unico,warm,portuguese")
-    assert after_lines[-4].endswith(",Portuguese,en,aquecimento_unico,firing,portuguese")
-    assert after_lines[-3].endswith(",Portuguese,en,aquecimento_unico,acceleration,portuguese")
-    assert after_lines[-2].endswith(",Portuguese,en,aquecimento_unico,chafe,portuguese")
-    assert after_lines[-1].endswith(",Portuguese,en,aquecimento_unico,warming-up,portuguese")
+    after_rows = read_csv_rows(csv_file)
+    assert len(after_rows) == before_count + 7
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "heating", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "warming", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "warm", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "firing", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "acceleration", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "chafe", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "aquecimento_unico", "warming-up", "portuguese"]) == 1
 
 
 def test_jj_command_prompts_and_cancels_on_exact_duplicate(tmp_path: Path) -> None:
@@ -456,7 +575,7 @@ def test_jj_command_prompts_and_allows_duplicate_on_yes(tmp_path: Path) -> None:
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
-    before_count = sum(1 for _ in csv_file.open(encoding="utf-8"))
+    before_count = len(read_csv_rows(csv_file))
 
     result = subprocess.run(
         [
@@ -472,7 +591,7 @@ def test_jj_command_prompts_and_allows_duplicate_on_yes(tmp_path: Path) -> None:
 
     assert result.returncode == 0, result.stderr or result.stdout
     assert "exact duplicate note(s) found:" in result.stdout
-    assert sum(1 for _ in csv_file.open(encoding="utf-8")) == before_count + 1
+    assert len(read_csv_rows(csv_file)) == before_count + 1
 
 
 def test_jj_command_reads_back_text_from_stdin(tmp_path: Path) -> None:
@@ -501,6 +620,6 @@ def test_jj_command_reads_back_text_from_stdin(tmp_path: Path) -> None:
     )
 
     assert result.returncode == 0, result.stderr or result.stdout
-    lines = csv_file.read_text(encoding="utf-8").splitlines()
-    assert lines[-2].endswith(",Portuguese,en,arrebentar_unico,Literal: to break or burst,portuguese")
-    assert lines[-1].endswith(",Portuguese,en,arrebentar_unico,Slang: to kill it,portuguese")
+    rows = read_csv_rows(csv_file)
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "arrebentar_unico", "Literal: to break or burst", "portuguese"]) == 1
+    assert count_matching_rows(csv_file, ["Portuguese", "en", "arrebentar_unico", "Slang: to kill it", "portuguese"]) == 1
