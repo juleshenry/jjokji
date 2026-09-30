@@ -9,20 +9,11 @@ import sys
 import uuid
 
 
-SIBLING_REPOS = {
-    "french_notes": "https://github.com/juleshenry/french_notes.git",
-    "korean_notes": "https://github.com/juleshenry/korean_notes.git",
-    "portuguese_notes": "https://github.com/juleshenry/portuguese_notes.git",
-    "castellano_notes": "https://github.com/juleshenry/castellano_notes.git",
-}
-
-NOTES_REPO_SUFFIX = "_notes"
-
 LANG_MAP = {
-    "pt": ("Portuguese", "portuguese_notes"),
-    "fr": ("French", "french_notes"),
-    "kr": ("Korean", "korean_notes"),
-    "es": ("Castellano", "castellano_notes"),
+    "pt": ("Portuguese", "portuguese"),
+    "fr": ("French", "french"),
+    "kr": ("Korean", "korean"),
+    "es": ("Castellano", "spanish"),
 }
 
 DEFAULT_TRANSLATION_LANG = "en"
@@ -72,12 +63,12 @@ def script_dir() -> str:
     return os.path.abspath(os.path.dirname(__file__))
 
 
-def workspace_root() -> str:
-    return os.path.abspath(os.path.join(script_dir(), ".."))
+def notes_root() -> str:
+    return os.path.join(script_dir(), "notes")
 
 
 def repo_path(name: str, root: str | None = None) -> str:
-    base = root or workspace_root()
+    base = root or notes_root()
     return os.path.join(base, name)
 
 
@@ -86,19 +77,14 @@ def all_lang_root() -> str:
 
 
 def notes_repos(root: str | None = None) -> list[str]:
-    base = root or workspace_root()
+    base = root or notes_root()
     if not os.path.isdir(base):
         return []
     return sorted(
         name
-        for name in os.listdir(base)
-        if name.endswith(NOTES_REPO_SUFFIX) and os.path.isdir(repo_path(name, base))
+        for _, name in LANG_MAP.values()
+        if os.path.isdir(repo_path(name, base))
     )
-
-
-def missing_repos(root: str | None = None) -> list[str]:
-    base = root or workspace_root()
-    return [name for name in SIBLING_REPOS if name not in notes_repos(base)]
 
 
 def brainbrew_ok() -> bool:
@@ -118,7 +104,6 @@ def brainbrew_command() -> str:
 def print_usage() -> None:
     print("Usage:")
     print("  jj doctor")
-    print("  jj bootstrap")
     print("  jj add <lang> <translation_lang> <front> <back>")
     print("  jj add <lang> <front> <back>")
     print("  jj <lang> <translation_lang> <front> <back>")
@@ -193,7 +178,7 @@ def collect_google_translate_back_lines(parts: list[str]) -> list[str]:
 
 
 def doctor(root: str | None = None) -> int:
-    base = root or workspace_root()
+    base = root or notes_root()
     print(f"workspace: {base}")
     discovered = notes_repos(base)
     for name in discovered:
@@ -228,38 +213,10 @@ def existing_note_keys(csv_file: str) -> set[tuple[str, str, str, str]]:
     return keys
 
 
-def bootstrap() -> int:
-    base = workspace_root()
-    print(f"workspace: {base}")
-    missing = missing_repos(base)
-    if not missing:
-        print("all sibling repos are present")
-        return doctor(base)
-
-    print("missing repos:")
-    for name in missing:
-        print(f"- {name}")
-
-    if not prompt_yes_no(f"Clone missing repos into {base}? [Y/n] "):
-        print("cancelled")
-        return 1
-
-    for name in missing:
-        url = SIBLING_REPOS[name]
-        target = repo_path(name, base)
-        result = subprocess.run(["gh", "repo", "clone", url.removesuffix(".git"), target], text=True)
-        if result.returncode != 0:
-            print(f"failed to clone {name}")
-            return result.returncode
-
-    return doctor(base)
-
-
 def ensure_ready() -> tuple[str, str, str]:
-    base = workspace_root()
+    base = notes_root()
     if not notes_repos(base):
-        print("missing sibling note repos:")
-        print(f"- expected at least one *{NOTES_REPO_SUFFIX} directory in {base}")
+        print(f"missing notes dirs: expected at least one language directory in {base}")
         raise SystemExit(1)
 
     if not brainbrew_ok():
@@ -347,8 +304,7 @@ def add_note(lang: str, translation_lang: str, front: str, back: str) -> int:
     base, all_lang_root, brainbrew = ensure_ready()
     language_name, repo_name = LANG_MAP[lang]
     if not os.path.isdir(repo_path(repo_name, base)):
-        print(f"missing target repo: {repo_path(repo_name, base)}")
-        print("run `jj bootstrap` first")
+        print(f"missing notes dir: {repo_path(repo_name, base)}")
         return 1
     md_file = notes_markdown_file(repo_path(repo_name, base))
     csv_file = os.path.join(all_lang_root, "src", "data", "LanguageNotes.csv")
@@ -410,9 +366,6 @@ def main() -> int:
 
     if command == "doctor":
         return doctor()
-
-    if command == "bootstrap":
-        return bootstrap()
 
     if command == "add":
         parsed = parse_add_args(args[1:])

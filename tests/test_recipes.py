@@ -344,8 +344,8 @@ def test_notes_markdown_file_uses_local_date_stamp(tmp_path: Path) -> None:
 
 def test_doctor_lists_discovered_notes_repos_only(tmp_path: Path) -> None:
     jj = load_jj_module()
-    (tmp_path / "portuguese_notes").mkdir()
-    (tmp_path / "french_notes").mkdir()
+    (tmp_path / "portuguese").mkdir()
+    (tmp_path / "french").mkdir()
     (tmp_path / "random_folder").mkdir()
 
     output = io.StringIO()
@@ -354,9 +354,9 @@ def test_doctor_lists_discovered_notes_repos_only(tmp_path: Path) -> None:
 
     rendered = output.getvalue()
     assert status == 0
-    assert f"ok      {tmp_path / 'french_notes'}" in rendered
-    assert f"ok      {tmp_path / 'portuguese_notes'}" in rendered
-    assert "castellano_notes" not in rendered
+    assert f"ok      {tmp_path / 'french'}" in rendered
+    assert f"ok      {tmp_path / 'portuguese'}" in rendered
+    assert "spanish" not in rendered
     assert "random_folder" not in rendered
 
 
@@ -365,14 +365,16 @@ def test_add_note_only_requires_target_repo(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
 
-    (workspace / "portuguese_notes").mkdir()
-    shutil.copytree(REPO_ROOT / "all_lang_notes", workspace / "jjokji" / "all_lang_notes")
+    (workspace / "notes" / "portuguese").mkdir(parents=True)
+    shutil.copytree(REPO_ROOT / "all_lang_notes", workspace / "all_lang_notes")
 
-    original_workspace_root = jj.workspace_root
+    original_notes_root = jj.notes_root
+    original_all_lang_root = jj.all_lang_root
     original_brainbrew_command = jj.brainbrew_command
     original_rebuild = jj.rebuild
     try:
-        jj.workspace_root = lambda: str(workspace)
+        jj.notes_root = lambda: str(workspace / "notes")
+        jj.all_lang_root = lambda: str(workspace / "all_lang_notes")
         jj.brainbrew_command = lambda: "brainbrew"
         jj.rebuild = lambda all_lang_root, brainbrew: 0
 
@@ -384,9 +386,10 @@ def test_add_note_only_requires_target_repo(tmp_path: Path) -> None:
 
         assert result == 0
         date_stamp = datetime.now().astimezone().date().isoformat()
-        assert (workspace / "portuguese_notes" / f"jjokji_notes_{date_stamp}.md").exists()
+        assert (workspace / "notes" / "portuguese" / f"jjokji_notes_{date_stamp}.md").exists()
     finally:
-        jj.workspace_root = original_workspace_root
+        jj.notes_root = original_notes_root
+        jj.all_lang_root = original_all_lang_root
         jj.brainbrew_command = original_brainbrew_command
         jj.rebuild = original_rebuild
 
@@ -394,9 +397,6 @@ def test_add_note_only_requires_target_repo(tmp_path: Path) -> None:
 def test_jj_command_splits_multiline_back_into_multiple_cards(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
-
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
 
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
@@ -430,9 +430,6 @@ def test_jj_command_defaults_target_language_to_en(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
 
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
-
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
@@ -458,9 +455,6 @@ def test_jj_command_accepts_google_translate_blob(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
 
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
-
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
@@ -483,9 +477,6 @@ def test_jj_command_accepts_google_translate_blob(tmp_path: Path) -> None:
 def test_jj_command_accepts_polysemous_google_translate_blob(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
-
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
 
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
@@ -539,9 +530,6 @@ def test_jj_command_prompts_and_cancels_on_exact_duplicate(tmp_path: Path) -> No
     workspace = tmp_path / "workspace"
     workspace.mkdir()
 
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
-
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
@@ -569,9 +557,6 @@ def test_jj_command_prompts_and_allows_duplicate_on_yes(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
 
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
-
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
     csv_file = workspace / "jjokji" / "all_lang_notes" / "src" / "data" / "LanguageNotes.csv"
@@ -597,9 +582,6 @@ def test_jj_command_prompts_and_allows_duplicate_on_yes(tmp_path: Path) -> None:
 def test_jj_command_reads_back_text_from_stdin(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     workspace.mkdir()
-
-    for repo_name in ["french_notes", "korean_notes", "portuguese_notes", "castellano_notes"]:
-        (workspace / repo_name).mkdir()
 
     shutil.copytree(REPO_ROOT, workspace / "jjokji")
 
